@@ -16,11 +16,10 @@
 			</a>
 		</div>
 		<div class="header-bottom">
-			<div class="left">
-					
-			</div>
-			<div class="menu">
-				
+			<div class="menu-top">
+				<?php
+					echo wp_nav_menu(['menu' => 'menu-main']);
+				 ?>
 			</div>
 			<div class="right">
 					
