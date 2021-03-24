@@ -8,3 +8,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="header">
+	<div class="container">
+		<div class="banner">
+			<a href="<?php echo get_theme_mod('link-banner') ?>">
+				<img src="<?php echo get_theme_mod('banner-header') ?>" alt="">
+			</a>
+		</div>
+	</div>
+</div>

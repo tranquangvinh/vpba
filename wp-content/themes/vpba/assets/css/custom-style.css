@@ -1,0 +1,6 @@
+.header .banner a {
+  display: block;
+}
+.header .banner img {
+  max-width: 100%;
+}
