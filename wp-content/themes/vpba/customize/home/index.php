@@ -29,3 +29,42 @@ function add_link_banner($wp_customize){
 		 'type'    => 'text',
 	));
 }
+
+
+function add_option_category($wp_customize){
+
+    // get list category
+    $terms = get_terms( array(
+        'taxonomy' => 'category',
+        'hide_empty' => false,
+    ));
+
+    $cats = array();
+    if(is_array($terms) && count($terms) > 0){
+        foreach ($terms as $term) {
+            // continue when $term is category default.
+            if($term->term_id > 1){
+                $cats[$term->term_id] = $term->name;
+            }
+        }
+    }
+
+    $wp_customize->add_setting( 'option-category',
+        array(
+            'default'    => ''
+        )
+    );
+
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'option-category',
+        array(
+            'label'      => __( 'Select category to slogan'),
+            'settings'   => 'option-category',
+            'priority'   => 10,
+            'section'    => 'static_front_page',
+            'type'    => 'select',
+            'choices' => $cats
+        )
+    ) );
+}

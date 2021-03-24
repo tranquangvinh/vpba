@@ -27,5 +27,5 @@ include_once(__DIR__ . '/customize/home/index.php');
 
 add_action('customize_register', 'add_banner_header');
 add_action('customize_register', 'add_link_banner');
+add_action('customize_register', 'add_option_category');
 
- 

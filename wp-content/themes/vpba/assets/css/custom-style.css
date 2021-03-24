@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  font-size: 14px;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -62,6 +66,7 @@ a:hover {
   top: 100%;
 }
 .header .header-bottom .menu-top ul > li > ul {
+  background: white;
   top: 120%;
   opacity: 0;
   visibility: hidden;
@@ -130,23 +135,25 @@ a:hover {
   transform: scale(1) translateZ(0);
 }
 
-.breadcrumb {
+.breadscumb-row {
+  margin-top: 20px;
+}
+.breadscumb-row .title-home {
   background: none;
 }
-.breadcrumb a {
+.breadscumb-row .title-home a {
+  display: inline-block;
   position: relative;
   background: linear-gradient(#3bb7c3, #1e88e5);
   color: #fff;
-  height: 30px;
-  line-height: 30px;
-  padding: 0px 15px;
+  padding: 5px 15px;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 0;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-.breadcrumb a:after {
+.breadscumb-row .title-home a:after {
   border-color: #1e88e5 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   position: absolute;
   content: "";
@@ -158,4 +165,17 @@ a:hover {
   top: 100%;
   border-width: 10px;
   border-style: solid;
+}
+.breadscumb-row .marquee-list .item-marquee {
+  display: inline-block;
+  margin-right: 50px;
+}
+.breadscumb-row .marquee-list .item-marquee a {
+  color: #000;
+}
+.breadscumb-row .marquee-list .item-marquee a:hover {
+  color: #78000f;
+}
+.breadscumb-row .current-time > div {
+  display: inline-block;
 }
