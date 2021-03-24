@@ -11,6 +11,7 @@ function meanwell_theme_enqueue_styles() {
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'bootstrap-js-min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', 0, true);
     wp_enqueue_script( 'custom-style-js', get_template_directory_uri() . '/assets/js/custom-style.js', 0, true);
+    wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/104543add0.js', 0, true);
 }
 
 function wpb_custom_new_menu() {

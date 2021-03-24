@@ -15,5 +15,16 @@
 				<img src="<?php echo get_theme_mod('banner-header') ?>" alt="">
 			</a>
 		</div>
+		<div class="header-bottom">
+			<div class="left">
+					
+			</div>
+			<div class="menu">
+				
+			</div>
+			<div class="right">
+					
+			</div>
+		</div>
 	</div>
 </div>

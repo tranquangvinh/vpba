@@ -1,6 +1,17 @@
+@charset "UTF-8";
 .header .banner a {
   display: block;
 }
 .header .banner img {
   max-width: 100%;
+}
+.header .header-bottom .left:after {
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 20px;
+  display: inline-block;
+  border: none;
 }
