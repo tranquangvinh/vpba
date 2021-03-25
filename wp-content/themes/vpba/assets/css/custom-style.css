@@ -179,3 +179,85 @@ a:hover {
 .breadscumb-row .current-time > div {
   display: inline-block;
 }
+
+.post-home .left {
+  float: left;
+  width: 60%;
+}
+.post-home .right {
+  float: right;
+  width: 40%;
+  max-height: 445px;
+  overflow-y: scroll;
+}
+.post-home .image {
+  position: relative;
+}
+.post-home .image .wrap-image {
+  display: block;
+  padding-top: 60%;
+  position: relative;
+  overflow: hidden;
+}
+.post-home .image .wrap-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  height: 100%;
+  object-fit: cover;
+}
+.post-home .item-post-right {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.post-home .item-post-right .image {
+  float: left;
+  width: 80px;
+  display: inline-block;
+}
+.post-home .item-post-right .image .wrap-image {
+  padding-top: 75%;
+}
+.post-home .item-post-right .title {
+  float: right;
+  display: inline-block;
+  width: calc(100% - 90px);
+}
+.post-home .item-post-right .child {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #d1d1d1;
+}
+.post-home .item-post-right:last-child .child {
+  border: none;
+}
+.post-home a {
+  display: block;
+  color: #404041;
+}
+.post-home a.active {
+  color: #78000f;
+}
+.post-home .title:hover {
+  color: #78000f;
+}
+.post-home .item-post-left {
+  padding-right: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.post-home .item-post-left .title {
+  margin-top: 5px;
+  display: block;
+  border-bottom: none;
+  line-height: 26px;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: RobotoBold;
+  color: #404041;
+  font-style: normal;
+  margin-bottom: 0px;
+}
+.post-home .item-post-left .wrap-image {
+  padding-top: 55%;
+}

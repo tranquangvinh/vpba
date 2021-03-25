@@ -1,4 +1,5 @@
 <?php
+include_once(dirname(__DIR__, 1) . '\Utils.php');
 
 function add_banner_header($wp_customize){
 	// banner header
@@ -30,41 +31,54 @@ function add_link_banner($wp_customize){
 	));
 }
 
-
 function add_option_category($wp_customize){
 
-    // get list category
-    $terms = get_terms( array(
-        'taxonomy' => 'category',
-        'hide_empty' => false,
-    ));
+    $cats = get_list_option_cat();
 
-    $cats = array();
-    if(is_array($terms) && count($terms) > 0){
-        foreach ($terms as $term) {
-            // continue when $term is category default.
-            if($term->term_id > 1){
-                $cats[$term->term_id] = $term->name;
-            }
-        }
+    if(is_array($cats) && count($cats) > 0){
+         $wp_customize->add_setting( 'option-category',
+            array(
+                'default'    => ''
+            )
+        );
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'option-category',
+            array(
+                'label'      => __( 'Select category to slogan'),
+                'settings'   => 'option-category',
+                'priority'   => 10,
+                'section'    => 'static_front_page',
+                'type'    => 'select',
+                'choices' => $cats
+            )
+        ) );
     }
+}
 
-    $wp_customize->add_setting( 'option-category',
-        array(
-            'default'    => ''
-        )
-    );
+function add_option_category_home($wp_customize){
 
-    $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'option-category',
-        array(
-            'label'      => __( 'Select category to slogan'),
-            'settings'   => 'option-category',
-            'priority'   => 10,
-            'section'    => 'static_front_page',
-            'type'    => 'select',
-            'choices' => $cats
-        )
-    ) );
+    $cats = get_list_option_cat();
+
+    if(is_array($cats) && count($cats) > 0){
+         $wp_customize->add_setting( 'option-category-home',
+            array(
+                'default'    => ''
+            )
+        );
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'option-category-home',
+            array(
+                'label'      => __( 'Select category to home'),
+                'settings'   => 'option-category-home',
+                'priority'   => 10,
+                'section'    => 'static_front_page',
+                'type'    => 'select',
+                'choices' => $cats
+            )
+        ) );
+    }
 }

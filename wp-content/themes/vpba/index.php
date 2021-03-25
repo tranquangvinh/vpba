@@ -51,13 +51,79 @@
             <div id="min"></div>
             <div id="sec"></div>
 		</div>
+	</div>
+	<div class="post-home mt-4">
+			<?php
+	            $cat_id = get_theme_mod('option-category');
+	            if(isset($cat_id)){
+	                $args = array(
+	                    'post_type' => 'post',
+	                    'posts_per_page' => 10,
+	                    'tax_query' => array(
+	                        array(
+	                            'taxonomy' => 'category',
+	                            'field' => 'term_id',
+	                            'terms' => $cat_id
+	                        )
+	                    )
+	                );
+	                $query = new WP_Query( $args );
 
-		<!--  -->
-		<div class="col-md-7 col-sm-12">
-			
-		</div>
-		<div class="col-md-5 col-sm-12">
-		</div>
+					if ( $query->have_posts() ) { 
+							$first_post = $query->posts[0];
+							$featured_img_url = get_the_post_thumbnail_url($first_post->ID,'full'); 
+							$post_link = get_permalink($first_post->ID);
+							$post_excerpt = wp_trim_words(  $first_post->post_content, 20, '...' );
+						?>
+						<div class="left">
+							<div class="item-post-left">
+								<a id="link-post" href="<?php echo $post_link; ?>">
+									<div class="image">
+										<div class="wrap-image">
+											<img id="img-post" src="<?php echo $featured_img_url; ?>" alt="">
+										</div>
+									</div>
+									<h2 id="title-post" class="title">
+										<?php echo $first_post->post_title; ?>
+									</h2>
+									<p  id="des-post" class="des">
+										<?php echo $post_excerpt; ?>
+									</p>
+								</a>
+							</div>
+						</div>
+						<div class="right">
+							<?php 
+								$index = 0;
+								while ( $query->have_posts() ) { 
+									$query->the_post(); ?>
+									<div class="item-post-right">
+										<div class="child">
+											<a class="box-post <?php echo ($index == 0 ? 'active' : '') ?>" href="<?php echo get_the_permalink(); ?>">
+												<div class="image">
+													<div class="wrap-image">
+														<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+													</div>
+												</div>
+												<span class="title">
+													<?php echo get_the_title(); ?>
+												</span>
+												<span class="excerpt d-none">
+													<?php echo wp_trim_words(get_the_content(), 20, '...' ); ?>
+												</span>
+											</a>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+						 	<?php 
+						 			$index++;
+					 			} ?>
+					 	</div>
+					 	<div class="clearfix"></div>
+				<?php }
+	                wp_reset_postdata();
+	            }
+	        ?>
 	</div>
 </div>
 

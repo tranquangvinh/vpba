@@ -1,4 +1,6 @@
 <?php
+
+add_theme_support( 'post-thumbnails' );
 // add js and css to header
 add_action( 'wp_enqueue_scripts', 'meanwell_theme_enqueue_styles' );
 function meanwell_theme_enqueue_styles() {
@@ -28,4 +30,6 @@ include_once(__DIR__ . '/customize/home/index.php');
 add_action('customize_register', 'add_banner_header');
 add_action('customize_register', 'add_link_banner');
 add_action('customize_register', 'add_option_category');
+add_action('customize_register', 'add_option_category_home');
+
 
