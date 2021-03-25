@@ -1,5 +1,5 @@
 <?php
-include_once(dirname(__DIR__, 1) . '\Utils.php');
+include_once(dirname(__DIR__, 1) . '/Utils.php');
 
 function add_banner_header($wp_customize){
 	// banner header
@@ -32,53 +32,51 @@ function add_link_banner($wp_customize){
 }
 
 function add_option_category($wp_customize){
-
-    $cats = get_list_option_cat();
-
-    if(is_array($cats) && count($cats) > 0){
-         $wp_customize->add_setting( 'option-category',
-            array(
-                'default'    => ''
-            )
-        );
-
-        $wp_customize->add_control( new WP_Customize_Control(
-            $wp_customize,
-            'option-category',
-            array(
-                'label'      => __( 'Select category to slogan'),
-                'settings'   => 'option-category',
-                'priority'   => 10,
-                'section'    => 'static_front_page',
-                'type'    => 'select',
-                'choices' => $cats
-            )
-        ) );
-    }
+    combobox_choise_category(
+        $wp_customize,
+        'Select category to slogan',
+        'option-category',
+        'static_front_page');
 }
 
 function add_option_category_home($wp_customize){
-
-    $cats = get_list_option_cat();
-
-    if(is_array($cats) && count($cats) > 0){
-         $wp_customize->add_setting( 'option-category-home',
-            array(
-                'default'    => ''
-            )
-        );
-
-        $wp_customize->add_control( new WP_Customize_Control(
+    combobox_choise_category(
             $wp_customize,
+            'Select category to home',
             'option-category-home',
-            array(
-                'label'      => __( 'Select category to home'),
-                'settings'   => 'option-category-home',
-                'priority'   => 10,
-                'section'    => 'static_front_page',
-                'type'    => 'select',
-                'choices' => $cats
-            )
-        ) );
-    }
+            'static_front_page');
 }
+
+function add_option_category_1($wp_customize){
+    combobox_choise_category(
+        $wp_customize,
+        'Select category 1',
+        'option-category-1',
+        'static_front_page');
+}
+
+function add_option_category_2($wp_customize){
+    combobox_choise_category(
+        $wp_customize,
+        'Select category 2',
+        'option-category-2',
+        'static_front_page');
+}
+
+function add_option_category_3($wp_customize){
+    combobox_choise_category(
+        $wp_customize,
+        'Select category 3',
+        'option-category-3',
+        'static_front_page');
+}
+
+function add_option_category_4($wp_customize){
+    combobox_choise_category(
+        $wp_customize,
+        'Select category 4',
+        'option-category-4',
+        'static_front_page');
+}
+
+

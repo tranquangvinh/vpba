@@ -1,65 +1,58 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 25, 2021 lúc 11:14 AM
--- Phiên bản máy phục vụ: 10.4.17-MariaDB
--- Phiên bản PHP: 7.3.26
+-- Host: localhost:3306
+-- Generation Time: Mar 25, 2021 at 04:59 PM
+-- Server version: 5.7.25
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Cơ sở dữ liệu: `vpba`
+-- Database: `vpba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_commentmeta`
+-- Table structure for table `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
-  `meta_id` bigint(20) UNSIGNED NOT NULL,
-  `comment_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+                                  `meta_id` bigint(20) UNSIGNED NOT NULL,
+                                  `comment_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                                  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                                  `meta_value` longtext COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_comments`
+-- Table structure for table `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
-  `comment_ID` bigint(20) UNSIGNED NOT NULL,
-  `comment_post_ID` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment_karma` int(11) NOT NULL DEFAULT 0,
-  `comment_approved` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
-  `comment_agent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'comment',
-  `comment_parent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0
+                               `comment_ID` bigint(20) UNSIGNED NOT NULL,
+                               `comment_post_ID` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                               `comment_author` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                               `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                               `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                               `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                               `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                               `comment_content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `comment_karma` int(11) NOT NULL DEFAULT '0',
+                               `comment_approved` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
+                               `comment_agent` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                               `comment_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'comment',
+                               `comment_parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                               `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_comments`
+-- Dumping data for table `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -68,40 +61,40 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_links`
+-- Table structure for table `wp_links`
 --
 
 CREATE TABLE `wp_links` (
-  `link_id` bigint(20) UNSIGNED NOT NULL,
-  `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_target` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_visible` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Y',
-  `link_owner` bigint(20) UNSIGNED NOT NULL DEFAULT 1,
-  `link_rating` int(11) NOT NULL DEFAULT 0,
-  `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `link_rel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `link_notes` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link_rss` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+                            `link_id` bigint(20) UNSIGNED NOT NULL,
+                            `link_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_target` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_visible` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Y',
+                            `link_owner` bigint(20) UNSIGNED NOT NULL DEFAULT '1',
+                            `link_rating` int(11) NOT NULL DEFAULT '0',
+                            `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `link_rel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `link_notes` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `link_rss` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_options`
+-- Table structure for table `wp_options`
 --
 
 CREATE TABLE `wp_options` (
-  `option_id` bigint(20) UNSIGNED NOT NULL,
-  `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
+                              `option_id` bigint(20) UNSIGNED NOT NULL,
+                              `option_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                              `option_value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_options`
+-- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -221,9 +214,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (114, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (115, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (116, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(117, 'cron', 'a:7:{i:1616670078;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1616684478;a:4:{s:18:\"wp_https_detection\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1616727678;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1616727685;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1616727688;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1617246078;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
-(119, 'recovery_keys', 'a:1:{s:22:\"mLaUvIrNO4idMrhfnaaB5g\";a:2:{s:10:\"hashed_key\";s:34:\"$P$Bbij1D02LKqKZKdCeCTOwrD2F1CvmD1\";s:10:\"created_at\";i:1616556998;}}', 'yes'),
-(120, 'https_detection_errors', 'a:2:{s:23:\"ssl_verification_failed\";a:1:{i:0;s:24:\"SSL verification failed.\";}s:17:\"bad_response_code\";a:1:{i:0;s:9:\"Forbidden\";}}', 'yes'),
+(117, 'cron', 'a:6:{i:1616691678;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1616727678;a:5:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:18:\"wp_https_detection\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1616727685;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1616727688;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1617246078;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
+(119, 'recovery_keys', 'a:2:{s:22:\"mLaUvIrNO4idMrhfnaaB5g\";a:2:{s:10:\"hashed_key\";s:34:\"$P$Bbij1D02LKqKZKdCeCTOwrD2F1CvmD1\";s:10:\"created_at\";i:1616556998;}s:22:\"ebRhygdrhssognQ3QBYfnl\";a:2:{s:10:\"hashed_key\";s:34:\"$P$BcVWaoEYL4urqHBb7/EtmsFw2lQy2r1\";s:10:\"created_at\";i:1616680568;}}', 'yes'),
+(120, 'https_detection_errors', 'a:1:{s:20:\"https_request_failed\";a:1:{i:0;s:21:\"HTTPS request failed.\";}}', 'yes'),
 (122, 'theme_mods_twentytwentyone', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1616555797;s:4:\"data\";a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:9:\"sidebar-2\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}}}}', 'yes'),
 (132, '_site_transient_timeout_browser_72766ab2b1c85af98adbbb9683600fdf', '1617159687', 'no'),
 (133, '_site_transient_browser_72766ab2b1c85af98adbbb9683600fdf', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:12:\"89.0.4389.90\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
@@ -231,14 +224,14 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (135, '_site_transient_php_check_27ba000775e29cd0fe5915760b10a2bf', 'a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}', 'no'),
 (143, 'can_compress_scripts', '1', 'no'),
 (152, 'new_admin_email', 'tranquangvinh5899@gmail.com', 'yes'),
-(155, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:57:\"https://downloads.wordpress.org/release/wordpress-5.7.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:57:\"https://downloads.wordpress.org/release/wordpress-5.7.zip\";s:10:\"no_content\";s:68:\"https://downloads.wordpress.org/release/wordpress-5.7-no-content.zip\";s:11:\"new_bundled\";s:69:\"https://downloads.wordpress.org/release/wordpress-5.7-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:3:\"5.7\";s:7:\"version\";s:3:\"5.7\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.6\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1616641382;s:15:\"version_checked\";s:3:\"5.7\";s:12:\"translations\";a:0:{}}', 'no'),
-(156, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1616641384;s:7:\"checked\";a:2:{s:19:\"akismet/akismet.php\";s:5:\"4.1.9\";s:9:\"hello.php\";s:5:\"1.7.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.1.9\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.1.9.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}s:9:\"hello.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/hello-dolly\";s:4:\"slug\";s:11:\"hello-dolly\";s:6:\"plugin\";s:9:\"hello.php\";s:11:\"new_version\";s:5:\"1.7.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/hello-dolly/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/hello-dolly.1.7.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=2052855\";s:2:\"1x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=2052855\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/hello-dolly/assets/banner-772x250.jpg?rev=2052855\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
-(157, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1616641384;s:7:\"checked\";a:4:{s:14:\"twentynineteen\";s:3:\"2.0\";s:12:\"twentytwenty\";s:3:\"1.7\";s:15:\"twentytwentyone\";s:3:\"1.2\";s:4:\"vpba\";s:0:\"\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:3:{s:14:\"twentynineteen\";a:6:{s:5:\"theme\";s:14:\"twentynineteen\";s:11:\"new_version\";s:3:\"2.0\";s:3:\"url\";s:44:\"https://wordpress.org/themes/twentynineteen/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/theme/twentynineteen.2.0.zip\";s:8:\"requires\";s:5:\"4.9.6\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:12:\"twentytwenty\";a:6:{s:5:\"theme\";s:12:\"twentytwenty\";s:11:\"new_version\";s:3:\"1.7\";s:3:\"url\";s:42:\"https://wordpress.org/themes/twentytwenty/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/twentytwenty.1.7.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentytwentyone\";a:6:{s:5:\"theme\";s:15:\"twentytwentyone\";s:11:\"new_version\";s:3:\"1.2\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentyone/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentyone.1.2.zip\";s:8:\"requires\";s:3:\"5.3\";s:12:\"requires_php\";s:3:\"5.6\";}}s:12:\"translations\";a:0:{}}', 'no'),
+(155, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:57:\"https://downloads.wordpress.org/release/wordpress-5.7.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:57:\"https://downloads.wordpress.org/release/wordpress-5.7.zip\";s:10:\"no_content\";s:68:\"https://downloads.wordpress.org/release/wordpress-5.7-no-content.zip\";s:11:\"new_bundled\";s:69:\"https://downloads.wordpress.org/release/wordpress-5.7-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:3:\"5.7\";s:7:\"version\";s:3:\"5.7\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.6\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1616685752;s:15:\"version_checked\";s:3:\"5.7\";s:12:\"translations\";a:0:{}}', 'no'),
+(156, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1616685754;s:7:\"checked\";a:2:{s:19:\"akismet/akismet.php\";s:5:\"4.1.9\";s:9:\"hello.php\";s:5:\"1.7.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.1.9\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.1.9.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}s:9:\"hello.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/hello-dolly\";s:4:\"slug\";s:11:\"hello-dolly\";s:6:\"plugin\";s:9:\"hello.php\";s:11:\"new_version\";s:5:\"1.7.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/hello-dolly/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/hello-dolly.1.7.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=2052855\";s:2:\"1x\";s:64:\"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=2052855\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:66:\"https://ps.w.org/hello-dolly/assets/banner-772x250.jpg?rev=2052855\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
+(157, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1616685754;s:7:\"checked\";a:4:{s:14:\"twentynineteen\";s:3:\"2.0\";s:12:\"twentytwenty\";s:3:\"1.7\";s:15:\"twentytwentyone\";s:3:\"1.2\";s:4:\"vpba\";s:0:\"\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:3:{s:14:\"twentynineteen\";a:6:{s:5:\"theme\";s:14:\"twentynineteen\";s:11:\"new_version\";s:3:\"2.0\";s:3:\"url\";s:44:\"https://wordpress.org/themes/twentynineteen/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/theme/twentynineteen.2.0.zip\";s:8:\"requires\";s:5:\"4.9.6\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:12:\"twentytwenty\";a:6:{s:5:\"theme\";s:12:\"twentytwenty\";s:11:\"new_version\";s:3:\"1.7\";s:3:\"url\";s:42:\"https://wordpress.org/themes/twentytwenty/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/twentytwenty.1.7.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentytwentyone\";a:6:{s:5:\"theme\";s:15:\"twentytwentyone\";s:11:\"new_version\";s:3:\"1.2\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentyone/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentyone.1.2.zip\";s:8:\"requires\";s:3:\"5.3\";s:12:\"requires_php\";s:3:\"5.6\";}}s:12:\"translations\";a:0:{}}', 'no'),
 (160, 'finished_updating_comment_type', '1', 'yes'),
 (161, 'current_theme', 'Vpba', 'yes'),
-(162, 'theme_mods_vpba', 'a:8:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}s:18:\"custom_css_post_id\";i:-1;s:13:\"banner-header\";s:71:\"http://vpba.demo/wp-content/uploads/2021/03/banner_rcJ-b9I9hUy2oxYN.png\";s:11:\"link_banner\";s:17:\"http://vpba.demo/\";s:11:\"link-banner\";s:17:\"http://vpba.demo/\";s:15:\"option-category\";s:1:\"5\";s:20:\"option-category-home\";s:1:\"5\";}', 'yes'),
+(162, 'theme_mods_vpba', 'a:12:{i:0;b:0;s:18:\"nav_menu_locations\";a:0:{}s:18:\"custom_css_post_id\";i:-1;s:13:\"banner-header\";s:71:\"http://vpba.demo/wp-content/uploads/2021/03/banner_rcJ-b9I9hUy2oxYN.png\";s:11:\"link_banner\";s:17:\"http://vpba.demo/\";s:11:\"link-banner\";s:17:\"http://vpba.demo/\";s:15:\"option-category\";s:1:\"5\";s:20:\"option-category-home\";s:1:\"5\";s:17:\"option-category-1\";s:1:\"4\";s:17:\"option-category-2\";s:1:\"4\";s:17:\"option-category-3\";s:1:\"4\";s:17:\"option-category-4\";s:1:\"4\";}', 'yes'),
 (163, 'theme_switched', '', 'yes'),
-(172, 'recovery_mode_email_last_sent', '1616556998', 'yes'),
+(172, 'recovery_mode_email_last_sent', '1616680568', 'yes'),
 (204, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}', 'yes'),
 (208, 'category_children', 'a:2:{i:4;a:5:{i:0;i:5;i:1;i:6;i:2;i:7;i:3;i:8;i:4;i:9;}i:10;a:7:{i:0;i:11;i:1;i:12;i:2;i:13;i:3;i:14;i:4;i:15;i:5;i:16;i:6;i:17;}}', 'yes'),
 (210, '_site_transient_timeout_browser_55ba2223e272e2c08e4c012f3913ee52', '1617202859', 'no'),
@@ -250,24 +243,24 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (220, 'option_category', '15', 'yes'),
 (221, 'option-category', '18', 'yes'),
 (238, '_transient_health-check-site-status-result', '{\"good\":12,\"recommended\":7,\"critical\":1}', 'yes'),
-(243, '_site_transient_timeout_theme_roots', '1616662626', 'no'),
-(244, '_site_transient_theme_roots', 'a:4:{s:14:\"twentynineteen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:15:\"twentytwentyone\";s:7:\"/themes\";s:4:\"vpba\";s:7:\"/themes\";}', 'no');
+(257, '_site_transient_timeout_theme_roots', '1616687553', 'no'),
+(258, '_site_transient_theme_roots', 'a:4:{s:14:\"twentynineteen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:15:\"twentytwentyone\";s:7:\"/themes\";s:4:\"vpba\";s:7:\"/themes\";}', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_postmeta`
+-- Table structure for table `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
-  `meta_id` bigint(20) UNSIGNED NOT NULL,
-  `post_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+                               `meta_id` bigint(20) UNSIGNED NOT NULL,
+                               `post_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                               `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                               `meta_value` longtext COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_postmeta`
+-- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -723,42 +716,44 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (540, 114, '_thumbnail_id', '131'),
 (543, 119, '_thumbnail_id', '130'),
 (546, 118, '_thumbnail_id', '129'),
-(549, 113, '_thumbnail_id', '128');
+(549, 113, '_thumbnail_id', '128'),
+(550, 140, '_wp_trash_meta_status', 'publish'),
+(551, 140, '_wp_trash_meta_time', '1616689302');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_posts`
+-- Table structure for table `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
-  `ID` bigint(20) UNSIGNED NOT NULL,
-  `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_title` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
-  `comment_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
-  `ping_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
-  `post_password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `post_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `to_ping` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pinged` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content_filtered` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `post_parent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `guid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `menu_order` int(11) NOT NULL DEFAULT 0,
-  `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
-  `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `comment_count` bigint(20) NOT NULL DEFAULT 0
+                            `ID` bigint(20) UNSIGNED NOT NULL,
+                            `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                            `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `post_content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `post_title` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `post_excerpt` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `post_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'publish',
+                            `comment_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
+                            `ping_status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'open',
+                            `post_password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `post_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `to_ping` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `pinged` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `post_content_filtered` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                            `post_parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                            `guid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `menu_order` int(11) NOT NULL DEFAULT '0',
+                            `post_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'post',
+                            `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `comment_count` bigint(20) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_posts`
+-- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -899,36 +894,37 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (136, 1, '2021-03-25 08:32:57', '2021-03-25 08:32:57', '<!-- wp:paragraph -->\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<!-- /wp:paragraph -->', 'Mang lại ấm no, hạnh phúc thực chất cho nhân dân mới là thành công của Đại hội', '', 'inherit', 'closed', 'closed', '', '114-revision-v1', '', '', '2021-03-25 08:32:57', '2021-03-25 08:32:57', '', 114, 'http://vpba.demo/?p=136', 0, 'revision', '', 0),
 (137, 1, '2021-03-25 08:33:05', '2021-03-25 08:33:05', '<!-- wp:paragraph -->\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<!-- /wp:paragraph -->', 'Nhiều chuyên gia kinh tế tham gia Hội đồng Biên tập Tạp chí Điện tử Doanh nhân Việt Nam', '', 'inherit', 'closed', 'closed', '', '119-revision-v1', '', '', '2021-03-25 08:33:05', '2021-03-25 08:33:05', '', 119, 'http://vpba.demo/?p=137', 0, 'revision', '', 0),
 (138, 1, '2021-03-25 08:33:14', '2021-03-25 08:33:14', '<!-- wp:paragraph -->\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<!-- /wp:paragraph -->', 'Thủ tướng Nguyễn Xuân Phúc: Tạo mọi điều kiện cho kinh tế tư nhân yên tâm đầu tư, kinh doanh', '', 'inherit', 'closed', 'closed', '', '118-revision-v1', '', '', '2021-03-25 08:33:14', '2021-03-25 08:33:14', '', 118, 'http://vpba.demo/?p=138', 0, 'revision', '', 0),
-(139, 1, '2021-03-25 08:33:26', '2021-03-25 08:33:26', '<!-- wp:paragraph -->\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<!-- /wp:paragraph -->', 'Thủ tướng: Đến 2045, Việt Nam sẽ xuất hiện các tập đoàn khổng lồ', '', 'inherit', 'closed', 'closed', '', '113-revision-v1', '', '', '2021-03-25 08:33:26', '2021-03-25 08:33:26', '', 113, 'http://vpba.demo/?p=139', 0, 'revision', '', 0);
+(139, 1, '2021-03-25 08:33:26', '2021-03-25 08:33:26', '<!-- wp:paragraph -->\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<!-- /wp:paragraph -->', 'Thủ tướng: Đến 2045, Việt Nam sẽ xuất hiện các tập đoàn khổng lồ', '', 'inherit', 'closed', 'closed', '', '113-revision-v1', '', '', '2021-03-25 08:33:26', '2021-03-25 08:33:26', '', 113, 'http://vpba.demo/?p=139', 0, 'revision', '', 0),
+(140, 1, '2021-03-25 16:21:42', '2021-03-25 16:21:42', '{\n    \"vpba::option-category-1\": {\n        \"value\": \"4\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-03-25 16:21:42\"\n    },\n    \"vpba::option-category-2\": {\n        \"value\": \"4\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-03-25 16:21:42\"\n    },\n    \"vpba::option-category-3\": {\n        \"value\": \"4\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-03-25 16:21:42\"\n    },\n    \"vpba::option-category-4\": {\n        \"value\": \"4\",\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-03-25 16:21:42\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '36b46fe0-4acd-4815-83c2-2fc7e1dd1dfd', '', '', '2021-03-25 16:21:42', '2021-03-25 16:21:42', '', 0, 'http://vpba.demo/2021/03/25/36b46fe0-4acd-4815-83c2-2fc7e1dd1dfd/', 0, 'customize_changeset', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_termmeta`
+-- Table structure for table `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
-  `meta_id` bigint(20) UNSIGNED NOT NULL,
-  `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+                               `meta_id` bigint(20) UNSIGNED NOT NULL,
+                               `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                               `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                               `meta_value` longtext COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_terms`
+-- Table structure for table `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
-  `term_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT 0
+                            `term_id` bigint(20) UNSIGNED NOT NULL,
+                            `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `term_group` bigint(10) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_terms`
+-- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -956,17 +952,17 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_term_relationships`
+-- Table structure for table `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
-  `object_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `term_order` int(11) NOT NULL DEFAULT 0
+                                         `object_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                                         `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                                         `term_order` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_term_relationships`
+-- Dumping data for table `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1026,20 +1022,20 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_term_taxonomy`
+-- Table structure for table `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
-  `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL,
-  `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `parent` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `count` bigint(20) NOT NULL DEFAULT 0
+                                    `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL,
+                                    `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                                    `taxonomy` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                                    `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                                    `parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                                    `count` bigint(20) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_term_taxonomy`
+-- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -1067,18 +1063,18 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_usermeta`
+-- Table structure for table `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
-  `umeta_id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+                               `umeta_id` bigint(20) UNSIGNED NOT NULL,
+                               `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+                               `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                               `meta_value` longtext COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_usermeta`
+-- Dumping data for table `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1108,46 +1104,46 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `wp_users`
+-- Table structure for table `wp_users`
 --
 
 CREATE TABLE `wp_users` (
-  `ID` bigint(20) UNSIGNED NOT NULL,
-  `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_nicename` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_url` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `user_status` int(11) NOT NULL DEFAULT 0,
-  `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+                            `ID` bigint(20) UNSIGNED NOT NULL,
+                            `user_login` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_nicename` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_url` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+                            `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+                            `user_status` int(11) NOT NULL DEFAULT '0',
+                            `display_name` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `wp_users`
+-- Dumping data for table `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'admin', '$P$BdKipJlHqhEb.hd0.ePsjzdREJJoYZ/', 'admin', 'tranquangvinh5899@gmail.com', 'http://vpba.demo', '2021-03-24 03:01:16', '', 0, 'admin');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `wp_commentmeta`
+-- Indexes for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
-  ADD PRIMARY KEY (`meta_id`),
+    ADD PRIMARY KEY (`meta_id`),
   ADD KEY `comment_id` (`comment_id`),
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Chỉ mục cho bảng `wp_comments`
+-- Indexes for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
-  ADD PRIMARY KEY (`comment_ID`),
+    ADD PRIMARY KEY (`comment_ID`),
   ADD KEY `comment_post_ID` (`comment_post_ID`),
   ADD KEY `comment_approved_date_gmt` (`comment_approved`,`comment_date_gmt`),
   ADD KEY `comment_date_gmt` (`comment_date_gmt`),
@@ -1155,157 +1151,152 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Chỉ mục cho bảng `wp_links`
+-- Indexes for table `wp_links`
 --
 ALTER TABLE `wp_links`
-  ADD PRIMARY KEY (`link_id`),
+    ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Chỉ mục cho bảng `wp_options`
+-- Indexes for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  ADD PRIMARY KEY (`option_id`),
+    ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`),
   ADD KEY `autoload` (`autoload`);
 
 --
--- Chỉ mục cho bảng `wp_postmeta`
+-- Indexes for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  ADD PRIMARY KEY (`meta_id`),
+    ADD PRIMARY KEY (`meta_id`),
   ADD KEY `post_id` (`post_id`),
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Chỉ mục cho bảng `wp_posts`
+-- Indexes for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  ADD PRIMARY KEY (`ID`),
+    ADD PRIMARY KEY (`ID`),
   ADD KEY `post_name` (`post_name`(191)),
   ADD KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   ADD KEY `post_parent` (`post_parent`),
   ADD KEY `post_author` (`post_author`);
 
 --
--- Chỉ mục cho bảng `wp_termmeta`
+-- Indexes for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
-  ADD PRIMARY KEY (`meta_id`),
+    ADD PRIMARY KEY (`meta_id`),
   ADD KEY `term_id` (`term_id`),
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Chỉ mục cho bảng `wp_terms`
+-- Indexes for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
-  ADD PRIMARY KEY (`term_id`),
+    ADD PRIMARY KEY (`term_id`),
   ADD KEY `slug` (`slug`(191)),
   ADD KEY `name` (`name`(191));
 
 --
--- Chỉ mục cho bảng `wp_term_relationships`
+-- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
-  ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
+    ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Chỉ mục cho bảng `wp_term_taxonomy`
+-- Indexes for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
-  ADD PRIMARY KEY (`term_taxonomy_id`),
+    ADD PRIMARY KEY (`term_taxonomy_id`),
   ADD UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Chỉ mục cho bảng `wp_usermeta`
+-- Indexes for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  ADD PRIMARY KEY (`umeta_id`),
+    ADD PRIMARY KEY (`umeta_id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Chỉ mục cho bảng `wp_users`
+-- Indexes for table `wp_users`
 --
 ALTER TABLE `wp_users`
-  ADD PRIMARY KEY (`ID`),
+    ADD PRIMARY KEY (`ID`),
   ADD KEY `user_login_key` (`user_login`),
   ADD KEY `user_nicename` (`user_nicename`),
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `wp_commentmeta`
+-- AUTO_INCREMENT for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `wp_comments`
+-- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
-  MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `wp_links`
+-- AUTO_INCREMENT for table `wp_links`
 --
 ALTER TABLE `wp_links`
-  MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `wp_options`
+-- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
+    MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;
 
 --
--- AUTO_INCREMENT cho bảng `wp_postmeta`
+-- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=550;
+    MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=552;
 
 --
--- AUTO_INCREMENT cho bảng `wp_posts`
+-- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+    MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
--- AUTO_INCREMENT cho bảng `wp_termmeta`
+-- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `wp_terms`
+-- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
-  MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+    MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT cho bảng `wp_term_taxonomy`
+-- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
-  MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+    MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT cho bảng `wp_usermeta`
+-- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+    MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT cho bảng `wp_users`
+-- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+    MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

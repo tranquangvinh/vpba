@@ -45,12 +45,7 @@
                 }
             ?>
 		</div>
-		<div class="col-md-4 col-sm-3 current-time text-right">
-            <div id="Date"></div>
-            <div id="hours"></div>
-            <div id="min"></div>
-            <div id="sec"></div>
-		</div>
+		<div class="col-md-4 col-sm-3 text-right" id="current-time"></div>
 	</div>
 	<div class="post-home mt-4">
 			<?php
@@ -125,6 +120,56 @@
 	            }
 	        ?>
 	</div>
+
+    <div class="row mt-4">
+        <div class="col-md-8 col-sm-12 content-left">
+            <!-- box cat start -->
+            <?php $term_id = get_theme_mod('option-category-1');
+
+                if(isset($term_id)){
+                    $cat_name = get_cat_name($term_id);
+                    $category_link = get_category_link($term_id);
+                    $list_cat_id = get_term_children($term_id, 'category');
+                    $list_object_cat = array();
+                    if(is_array($list_cat_id) && count($list_cat_id) > 0){
+                        foreach ($list_cat_id as $id){
+                            $list_object_cat[] = [
+                                'term_name' => get_cat_name($id),
+                                'term_link' => get_category_link($id),
+                            ];
+                        }
+                    }
+                ?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-header">
+                            <a class="main" href="<?php echo $category_link; ?>"><span><?php echo $cat_name; ?></span></a>
+                            <?php if(count($list_object_cat) > 0) : ?>
+                                <div class="list-child-category">
+                                    <?php foreach($list_object_cat as $term) :  ?>
+                                        <a href="<?php echo $term['term_link'] ?>">
+                                            <?php echo $term['term_name'] ?>
+                                        </a>
+                                    <?php endforeach;?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                123123123
+                            </div>
+                            <div class="col-md-6">123123123</div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <!-- box cat end -->
+        </div>
+
+        <div class="col-md-3 col-sm-12">
+
+        </div>
+    </div>
 </div>
 
 
