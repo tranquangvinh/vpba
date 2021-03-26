@@ -33,4 +33,13 @@ $(document).ready(function() {
            // out hover
         }
     )
+
+    // slider
+    $('.owl-carousel-sidebar').owlCarousel({
+        loop:true,
+        margin:0,
+        nav:false,
+        autoplay: true,
+        items: 1
+    })
 });

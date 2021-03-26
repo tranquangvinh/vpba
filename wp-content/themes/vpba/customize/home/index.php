@@ -1,5 +1,6 @@
 <?php
-include_once(dirname(__DIR__, 1) . '/Utils.php');
+include_once (dirname(__DIR__, 1) . '/Utils.php');
+include_once (dirname(__DIR__, 2) . '/plugins/box-icon/box-icon.php');
 
 function add_banner_header($wp_customize){
 	// banner header
@@ -78,5 +79,24 @@ function add_option_category_4($wp_customize){
         'option-category-4',
         'static_front_page');
 }
+
+function add_list_gallery($wp_customize){
+    $wp_customize->add_setting('item_gallery', array(
+        'default'        => '',
+    ));
+    $wp_customize->add_control( new CDH_Box_Icon_control( $wp_customize, 'item_gallery',
+        array(
+            'label' => __( 'Hình ảnh hoạt động' ),
+            'section' => 'sidebar',
+            'input_args' => [
+            ],
+            'fields' => [
+                ['image', 'image', __("Image", 'nova-rklv')],
+                ['link', 'link', __("Link", 'nova-rklv')],
+            ]
+        )
+    ) );
+}
+
 
 

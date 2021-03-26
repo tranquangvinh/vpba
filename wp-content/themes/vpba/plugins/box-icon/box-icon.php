@@ -26,11 +26,11 @@ if (class_exists('WP_Customize_Control')) {
                 array('jquery'), '1.0', true);
 
             wp_enqueue_script(__CLASS__,
-                get_stylesheet_directory_uri() . "/custom-control/box-icon/box-icon.js",
+                get_stylesheet_directory_uri() . "/plugins/box-icon/box-icon.js",
                 array('jquery', 'skyrocket-select2-js'), '1.0', true);
 
             wp_enqueue_style(__CLASS__,
-                get_stylesheet_directory_uri() . "/custom-control/box-icon/box-icon.css",
+                get_stylesheet_directory_uri() . "/plugins/box-icon/box-icon.css",
                 array(), '1.0', 'all');
         }
 
