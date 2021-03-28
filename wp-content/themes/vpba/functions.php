@@ -31,30 +31,10 @@ function wpb_custom_new_menu() {
 }
 add_action( 'init', 'wpb_custom_new_menu' );
 
-
-// add section customize
-include_once(__DIR__ . '/customize/section/index.php');
-add_action('customize_register', 'block_sidebar');
-
 // add customize theme settings
-include_once(__DIR__ . '/customize/home/index.php');
-add_action('customize_register', 'add_banner_header');
-add_action('customize_register', 'add_link_banner');
-add_action('customize_register', 'add_option_category');
-add_action('customize_register', 'add_option_category_home');
-add_action('customize_register', 'add_option_category_1');
-add_action('customize_register', 'add_option_category_2');
-add_action('customize_register', 'add_option_category_3');
-add_action('customize_register', 'add_option_category_4');
-add_action('customize_register', 'add_list_gallery');
-
-
+include_once(__DIR__ . '/customize/index.php');
 // add actions
 include_once(__DIR__ . '/actions/index.php');
-add_action('homepage_block_category', 'action_box_cate');
-add_action('box_cat_header', 'action_box_cat_header');
-add_action('marquee_header', 'action_marquee_header');
-add_action('slider', 'action_slider');
 
 
 

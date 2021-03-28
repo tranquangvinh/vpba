@@ -1,6 +1,6 @@
 <?php 
 function render_slider($slider){
-	if(is_array($slider)){ ?>
+	if(is_array($slider) && count($slider) > 0){ ?>
         <div class="owl-carousel owl-theme owl-carousel-sidebar">
         <?php foreach ($slider as $item){
                 $link = "";
