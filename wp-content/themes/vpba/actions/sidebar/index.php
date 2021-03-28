@@ -20,7 +20,7 @@ function action_videos(){
 function action_advertisements(){
     $advertisements = get_theme_mod('item_advertisement');
     $advertisements = json_decode($advertisements);
-    render_marquee_sidebar_advertisement($advertisements);
+    render_marquee_sidebar_advertisement($advertisements, "down");
 }
 
 function action_exchange_rate_info(){

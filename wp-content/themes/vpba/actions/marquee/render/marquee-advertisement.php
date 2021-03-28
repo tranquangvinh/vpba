@@ -1,7 +1,7 @@
 <?php
-function render_marquee_sidebar_advertisement($marquees){
+function render_marquee_sidebar_advertisement($marquees, $direction){
     if (is_array($marquees) && count($marquees) > 0) { ?>
-        <marquee class="marquee-sidebar-advertisement" direction="down" scrollamount="3">
+        <marquee class="marquee-sidebar-advertisement" direction="<?php echo $direction; ?>" scrollamount="3">
             <?php
             foreach( $marquees as $marquee) :
                     $link = "";

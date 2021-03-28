@@ -445,3 +445,78 @@ a:hover {
 .sidebar .link-website select:focus {
   outline: none;
 }
+
+.footer .advertisement-footer {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #bfd87c;
+}
+.footer .advertisement-footer .marquee-sidebar-advertisement {
+  height: auto;
+}
+.footer .advertisement-footer .item-marquee {
+  display: inline-block;
+}
+.footer .advertisement-footer .item-marquee img {
+  height: 90px;
+  width: auto;
+  margin-right: 10px;
+}
+.footer .footer-bottom {
+  margin-top: 30px;
+  background: #78000f;
+}
+.footer .footer-bottom .top {
+  padding-top: 7px;
+  margin-bottom: 7px;
+  display: flex;
+}
+.footer .footer-bottom .top .menu-footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+.footer .footer-bottom .top .menu-footer ul li {
+  display: inline-block;
+  list-style: none;
+}
+.footer .footer-bottom .top .menu-footer ul li a {
+  display: block;
+  color: white;
+  padding: 7px 15px;
+}
+.footer .footer-bottom .top .menu-footer ul li:first-child a {
+  padding-left: 0px;
+}
+.footer .footer-bottom .top .list-social {
+  display: flex;
+}
+.footer .footer-bottom .top .list-social > div {
+  width: 32px;
+  padding: 7px;
+  background: white;
+  margin-right: 7px;
+  text-align: center;
+  transition: all 0.4s;
+}
+.footer .footer-bottom .top .list-social > div:hover {
+  transition: all 0.4s;
+  background: #94646a;
+}
+.footer .footer-bottom .top .list-social > div:hover i {
+  color: white;
+}
+.footer .footer-bottom .top .list-social > div i {
+  color: #78000f;
+}
+.footer .footer-bottom .container {
+  background-image: url("../img/bg-footer.png");
+  background-size: cover;
+  width: 100%;
+}
+.footer .footer-bottom .contact {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.26);
+}
+.footer .footer-bottom .contact > div {
+  color: white;
+}
