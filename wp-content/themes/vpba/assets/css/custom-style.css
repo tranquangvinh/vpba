@@ -13,8 +13,82 @@ a:hover {
 .header .banner img {
   max-width: 100%;
 }
+.header .header-bottom {
+  position: relative;
+}
+.header .header-bottom .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+}
+.header .header-bottom .right > div {
+  padding: 17px 15px;
+}
+.header .header-bottom .right > div:last-child {
+  padding-right: 10px;
+}
+.header .header-bottom .right .icon-search:hover, .header .header-bottom .right .icon-user:hover {
+  cursor: pointer;
+}
+.header .header-bottom .right .icon-search i, .header .header-bottom .right .icon-user i {
+  font-size: 17px;
+  color: #333;
+}
+.header .header-bottom .right .icon-search {
+  position: relative;
+}
+.header .header-bottom .right .form-search {
+  padding: 10px;
+  position: absolute;
+  top: 130%;
+  border-top: 2px solid #78000f;
+  width: 250px;
+  background: white;
+  right: 0px;
+  z-index: 999;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.header .header-bottom .right .form-search.active {
+  transition: all 0.3s;
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+.header .header-bottom .right .form-search #search {
+  width: 100%;
+  padding: 8px 10px;
+  padding-right: 45px;
+  border-radius: 0px;
+  font-size: 13px;
+  border: 1px solid #efefef;
+}
+.header .header-bottom .right .form-search #search:focus {
+  outline: none;
+}
+.header .header-bottom .right .form-search #search::placeholder {
+  font-style: italic;
+}
+.header .header-bottom .right .form-search .btn-search {
+  border-radius: 0px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #78000f;
+  border: transparent;
+}
+.header .header-bottom .right .form-search .btn-search i {
+  color: white;
+}
 .header .header-bottom .menu-top {
+  padding-right: 80px;
   border-bottom: 0.5px solid #ccc;
+}
+.header .header-bottom .menu-top .menu > li:first-child a {
+  padding-left: 0;
 }
 .header .header-bottom .menu-top ul {
   margin: 0px;
@@ -542,7 +616,6 @@ a:hover {
   -webkit-transition: all ease 0.3s;
 }
 .box-post .right .title {
-  color: #1c1c1c;
   font-size: 18px;
   line-height: 20px;
   margin-bottom: 5px;
@@ -555,7 +628,10 @@ a:hover {
   font-size: 20px;
   line-height: 28px;
 }
-.box-post .right .title:hover {
+.box-post .right .title a {
+  color: #1c1c1c;
+}
+.box-post .right .title a:hover {
   text-decoration: underline;
 }
 
@@ -606,4 +682,104 @@ a:hover {
   line-height: 20px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+.data-empty {
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+.post-detail {
+  margin-top: 50px;
+}
+.post-detail .title {
+  color: #78000f;
+  font-size: 23px !important;
+  font-family: Roboto, verdana, Avo;
+}
+.post-detail .time-create-date {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 7px;
+}
+
+.tag-post {
+  padding: 10px 0px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 30px;
+}
+.tag-post .tag-name {
+  padding: 4px;
+  margin-right: 5px;
+  background: #78000f;
+  display: inline-block;
+  color: white;
+  margin-bottom: 5px;
+}
+.tag-post .title-tag {
+  color: white;
+  background: #78000f;
+  display: inline-block;
+  padding: 4px;
+  padding-right: 7px;
+  padding-left: 30px;
+  position: relative;
+}
+.tag-post .title-tag:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  border-right: 15px #78000f solid;
+  border-top: 15px white solid;
+  border-bottom: 14px white solid;
+}
+.tag-post .title-tag:before {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  background: #F6F6F6;
+  top: 12px;
+  left: 15px;
+  content: "";
+  z-index: 99;
+}
+
+.related-post {
+  padding: 10px 0px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 30px;
+}
+.related-post .post-item {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e8e8e8;
+}
+.related-post .post-item:after {
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  display: block;
+  content: " ";
+  width: 7px;
+  height: 7px;
+  background: #57677d;
+  border-radius: 1px;
+  margin-right: 4px;
+  margin: 7px 10px 2px 0;
+}
+.related-post .post-item a {
+  color: #333;
+}
+.related-post .post-item a:hover {
+  color: #78000f;
+}
+.related-post .post-item:last-child {
+  border-bottom: none;
 }

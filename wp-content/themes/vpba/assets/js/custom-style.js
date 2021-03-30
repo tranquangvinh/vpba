@@ -85,4 +85,13 @@ $(document).ready(function() {
             window.open($link, '_blank').focus();
         }
     })
+
+    // //toggleclass form search
+    $('.icon-search').on('click', function(){
+        $('#box-search').toggleClass('active');
+    })
+
+    //
+    var time_create_post = $('#time-create-date-hide').html();
+   $('#time-create-date').html(dayjs(time_create_post).format('ddd [Ngày] D/MM/YYYY, h:mm:ss A'));
 });

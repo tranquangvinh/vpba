@@ -12,7 +12,9 @@ if ( have_posts() ) :
 			</div>
 			<div class="col-md-8 col-sm-12 right">
 				<p class="title">
-					<?php echo get_the_title(); ?>	
+					<a href="<?php echo get_the_permalink() ?>">
+						<?php echo get_the_title(); ?>	
+					</a>
 				</p>
 				<p class="des">
 					<?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
@@ -21,6 +23,8 @@ if ( have_posts() ) :
 		</div>
 <?php	
 	endwhile;
+else: 
+	echo "<h1 class='data-empty'>Không có kết quả phù hợp với từ khóa tìm kiếm.</h1>";
 endif;
 wp_reset_postdata(); ?>
 <div class="line-pagination"></div>

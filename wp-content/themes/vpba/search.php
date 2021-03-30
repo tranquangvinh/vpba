@@ -1,8 +1,7 @@
-<?php 
-	get_header();
-	$category = get_queried_object();
-?>
-<?php get_template_part('template-parts/header/breadcrumb', 'archive', ['title' => $category->name]); ?>
+<?php
+
+get_header(); ?>
+<?php get_template_part('template-parts/header/breadcrumb', 'archive', ['title' => "Kết quả tìm kiếm"]); ?>
 
 <div class="container">
 	<div class="row">
@@ -17,5 +16,5 @@
 		</div>
 	</div>
 </div>
-<?php get_footer() ?>
 
+<?php get_footer();
