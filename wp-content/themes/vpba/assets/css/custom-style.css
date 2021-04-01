@@ -782,3 +782,47 @@ a:hover {
 .related-post .post-item:last-child {
   border-bottom: none;
 }
+
+.social {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.form-contact {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+}
+.form-contact .input-form-contact {
+  width: 100%;
+  padding: 5px 10px;
+}
+.form-contact .left {
+  float: left;
+  width: 30%;
+}
+.form-contact .right {
+  float: left;
+  width: 70%;
+  margin-bottom: 15px;
+}
+.form-contact .wpcf7-submit {
+  padding: 7px 15px;
+  margin: auto;
+  background: #78000f;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  float: right;
+}
+.form-contact .wpcf7-submit:focus {
+  outline: none;
+}
+.form-contact input, .form-contact textarea {
+  border: 1px solid #7d7d7dcc;
+  border-radius: 7px;
+  box-shadow: none;
+}
+.form-contact input:focus, .form-contact textarea:focus {
+  outline: none;
+}

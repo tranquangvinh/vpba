@@ -854,3 +854,45 @@ a:hover{
 		}
 	}
 }
+.social{
+	padding: 10px 0px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.form-contact{
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid #e8e8e8;
+	.input-form-contact{
+		width: 100%;
+		padding: 5px 10px;
+	}
+	.left{
+		float: left;
+		width: 30%;
+	}
+	.right{
+		float: left;
+		width: 70%;
+		margin-bottom: 15px;
+	}
+	.wpcf7-submit{
+		padding: 7px 15px;
+		margin: auto;
+		background: $color-main;
+		color: white;
+		border: none;
+		border-radius: 7px;
+		float: right;
+		&:focus{
+			outline: none;
+		}
+	}
+	input, textarea{
+		border: 1px solid #7d7d7dcc;
+		border-radius: 7px;
+		box-shadow: none;
+		&:focus{
+			outline: none;
+		}
+	}
+}

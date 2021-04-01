@@ -20,6 +20,20 @@ while ( have_posts() ) :
 	<?php   endif;
 		?>
 	</div>
+
+	<div class="social">
+		<!-- fb-root -->
+		<div id="fb-root"></div>
+
+		<!-- like and share -->
+		<div class="d-block">
+			<div class="fb-like" data-href="<?php echo get_the_permalink(); ?>" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+		</div>
+		<!-- comment -->
+		<div class="fb-comments" data-href="<?php echo get_the_permalink(); ?>" data-width="" data-numposts="5"></div>
+	</div>
+
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=1955523768040959&autoLogAppEvents=1" nonce="hWtfk6rn"></script>
 <?php endwhile; ?>
 
 
