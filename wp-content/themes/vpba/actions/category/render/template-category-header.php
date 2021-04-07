@@ -4,7 +4,7 @@ function template_category_header($query){
 		$first_post = $query->posts[0];
 		$featured_img_url = get_the_post_thumbnail_url($first_post->ID,'full'); 
 		$post_link = get_permalink($first_post->ID);
-		$post_excerpt = wp_trim_words(  $first_post->post_content, 20, '...' );
+		$post_excerpt = wp_trim_words(  $first_post->post_content, 40, '...' );
 		?>
 			<div class="left">
 				<div class="item-post-left">
@@ -40,7 +40,7 @@ function template_category_header($query){
 										<?php echo get_the_title(); ?>
 									</span>
 									<span class="excerpt d-none">
-										<?php echo wp_trim_words(get_the_content(), 20, '...' ); ?>
+										<?php echo wp_trim_words(get_the_content(), 40, '...' ); ?>
 									</span>
 								</a>
 								<div class="clearfix"></div>
