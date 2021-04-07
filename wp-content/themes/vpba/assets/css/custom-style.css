@@ -1,4 +1,21 @@
 @charset "UTF-8";
+@font-face {
+  font-family: arial;
+  src: url("../font/arial.ttf");
+}
+/* vietnamese */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../font/Roboto.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+body {
+  font-family: arial !important;
+}
+
 body {
   font-size: 14px;
 }
@@ -225,7 +242,7 @@ a:hover {
   text-transform: uppercase;
   border-radius: 0;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: arial, Helvetica, sans-serif;
 }
 .breadscumb-row .title-home a:after {
   border-color: #78000f rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
@@ -327,7 +344,7 @@ a:hover {
   line-height: 26px;
   font-weight: 700;
   font-size: 18px;
-  font-family: RobotoBold;
+  font-family: Roboto;
   color: #404041;
   font-style: normal;
   margin-bottom: 0px;
@@ -390,7 +407,7 @@ a:hover {
 }
 .content-left .item-post-left .image .wrap-image {
   display: block;
-  padding-top: 60%;
+  padding-top: 80%;
   position: relative;
   overflow: hidden;
 }
@@ -418,7 +435,7 @@ a:hover {
   line-height: 26px;
   font-weight: 700;
   font-size: 18px;
-  font-family: RobotoBold;
+  font-family: Roboto;
   color: #404041;
   font-style: normal;
 }
@@ -619,7 +636,7 @@ a:hover {
   font-size: 18px;
   line-height: 20px;
   margin-bottom: 5px;
-  font-family: arial, robotobold;
+  font-family: arial, Roboto;
   font-weight: bold;
   overflow: hidden;
   display: -webkit-box;
@@ -697,7 +714,8 @@ a:hover {
 .post-detail .title {
   color: #78000f;
   font-size: 23px !important;
-  font-family: Roboto, verdana, Avo;
+  font-family: Roboto;
+  font-weight: 700;
 }
 .post-detail .time-create-date {
   border-bottom: 1px solid #efefef;
@@ -825,4 +843,12 @@ a:hover {
 }
 .form-contact input:focus, .form-contact textarea:focus {
   outline: none;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 1;
+  cursor: pointer;
 }

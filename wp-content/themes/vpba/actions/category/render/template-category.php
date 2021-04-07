@@ -50,7 +50,7 @@ function template_category($cat){
 							$first_post = $query->posts[0];
 							$featured_img_url = get_the_post_thumbnail_url($first_post->ID,'full'); 
 							$post_link = get_permalink($first_post->ID);
-							$post_excerpt = wp_trim_words(  $first_post->post_content, 13, '...' );
+							$post_excerpt = wp_trim_words(  $first_post->post_content, 25, '...' );
 						?>
 	                    <div class="row">
 	                        <div class="col-md-6">

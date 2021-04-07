@@ -94,4 +94,21 @@ $(document).ready(function() {
     //
     var time_create_post = $('#time-create-date-hide').html();
    $('#time-create-date').html(dayjs(time_create_post).format('ddd [Ngày] D/MM/YYYY, h:mm:ss A'));
+
+
+    $("#back-to-top").click(function () {
+        $("html, body").animate({scrollTop: 0}, 1000);
+    });
+
+    // back to top
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    $("#back-to-top").click(function () {
+        $("html, body").animate({scrollTop: 0}, 1000);
+    });
 });
