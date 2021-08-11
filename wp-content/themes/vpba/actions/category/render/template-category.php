@@ -17,11 +17,11 @@ function template_category($cat){
             }
     	} ?>
 
-	    <div class="row">
-	        <div class="col-md-12">
+	    <div class="row mt-3">
+	        <div class="col-md-12 col-sm-12">
 	            <div class="title-header d-flex align-items-end">
 	                <a class="main mr-auto" href="<?php echo $category_link; ?>"><span><?php echo $cat_name; ?></span></a>
-	                <?php if(count($list_object_cat) > 0) : ?>
+	                <?php if(count($list_object_cat) > 0 && !wp_is_mobile()) : ?>
 	                    <div class="list-child-category">
 	                        <?php foreach($list_object_cat as $term) :  ?>
 	                            	<a href="<?php echo $term['term_link'] ?>">
@@ -32,6 +32,16 @@ function template_category($cat){
 	                <?php endif; ?>
 	                <div class="clearfix"></div>
 	            </div>
+                <?php if(count($list_object_cat) > 0 && wp_is_mobile()) : ?>
+                    <div class="list-child-category mb-3">
+                        <?php foreach($list_object_cat as $term) :  ?>
+                            <a href="<?php echo $term['term_link'] ?>">
+                                <?php echo $term['term_name'] ?>
+                            </a>
+                        <?php endforeach;?>
+                    </div>
+                <?php endif; ?>
+                <div class="clearfix"></div>
 	            <?php
 	                $args = array(
 	                    'post_type' => 'post',
@@ -53,7 +63,7 @@ function template_category($cat){
 							$post_excerpt = wp_trim_words(  $first_post->post_content, 25, '...' );
 						?>
 	                    <div class="row">
-	                        <div class="col-md-6">
+	                        <div class="col-md-6 col-sm-6">
 	                            <div class="item-post-left">
 	                            	<a id="link-post" href="<?php echo $post_link; ?>">
 	                            		<div class="image">
@@ -70,7 +80,7 @@ function template_category($cat){
 	                            	</a>
 	                            </div>
 	                        </div>
-	                        <div class="col-md-6">
+	                        <div class="col-md-6 col-sm-6">
 	                			<?php 
 	                				$index = 0;
 	                				while ( $query->have_posts() ) { 

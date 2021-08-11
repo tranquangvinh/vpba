@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7deeebe6-801f-490b-beb0-262f308f34c5" name="Default Changelist" comment="" />
+    <list default="true" id="7deeebe6-801f-490b-beb0-262f308f34c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/vpba/assets/js/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/vpba/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vpba.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba.zip" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/actions/category/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/actions/category/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/actions/category/render/template-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/actions/category/render/template-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/actions/marquee/render/marquee-advertisement.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/actions/marquee/render/marquee-advertisement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/custom-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/custom-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/custom-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/custom-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/assets/css/prepros.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/assets/js/custom-style.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/assets/js/custom-style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/vpba/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/vpba/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +27,46 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rG9cfkOVw10SmvaFG5GYPBufWF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes/vpba/assets/js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7deeebe6-801f-490b-beb0-262f308f34c5" name="Default Changelist" comment="" />
+      <created>1618591650091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618591650091</updated>
+      <workItem from="1618591656283" duration="31000" />
+      <workItem from="1618591692597" duration="2775000" />
+      <workItem from="1619101536144" duration="11750000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -23,5 +78,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

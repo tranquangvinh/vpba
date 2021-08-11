@@ -6,19 +6,19 @@ function action_box_cate(){
 	$categories = [
 		[
 			"cat_id" => get_theme_mod('option-category-1'),
-			"cat_limit" => 5
+			"cat_limit" => 6
 		],
 		[
 			"cat_id" => get_theme_mod('option-category-2'),
-			"cat_limit" => 5
+			"cat_limit" => 6
 		],
 		[
 			"cat_id" => get_theme_mod('option-category-3'),
-			"cat_limit" => 5
+			"cat_limit" => 6
 		],
 		[
 			"cat_id" => get_theme_mod('option-category-4'),
-			"cat_limit" => 5
+			"cat_limit" => 6
 		]
 	];
 

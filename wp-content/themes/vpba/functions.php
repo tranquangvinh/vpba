@@ -11,6 +11,7 @@ function meanwell_theme_enqueue_styles() {
     wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/assets/css/custom-style.css');
     wp_enqueue_style( 'select2', get_template_directory_uri() . '/assets/css/select2.min.css');
     wp_enqueue_style( 'carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css');
+    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/css/slick.css');
 
     // js
     wp_enqueue_script( 'bootstrap-js-min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', ["jquery"], true);
@@ -22,7 +23,7 @@ function meanwell_theme_enqueue_styles() {
     wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/assets/js/cdh-customize-upload.js', 0, true);
     wp_enqueue_script( 'font-awesome', get_template_directory_uri() . '/assets/js/select2.full.min.js', 0, true);
     wp_enqueue_script( 'carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', 0, true);
-
+    wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', 0, true);
 
 }
 
