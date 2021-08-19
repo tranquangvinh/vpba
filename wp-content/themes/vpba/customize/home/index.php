@@ -1,6 +1,7 @@
 <?php
 include_once (dirname(__DIR__, 1) . '/Utils.php');
 include_once (dirname(__DIR__, 2) . '/plugins/box-icon/box-icon.php');
+include_once (dirname(__DIR__, 2) . '/plugins/multi-select/multi-select.php');
 
 function add_banner_header($wp_customize){
 	// banner header
