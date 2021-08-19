@@ -32,28 +32,31 @@ function nt_sanitize_cat( $input )
 }
 
 function multi_choise_category($wp_customize, $label, $control_id, $section_id){
-
     $cats = get_list_option_cat();
-    $wp_customize->add_setting( $control_id, array(
-        'default' => 0,
-        'transport'   => 'refresh',
-    ));
-    
-    $wp_customize->add_control(
-        new Nt_Customize_Control_Multiple_Select (
-            $wp_customize,
-            'nt_featured_cat',
-            array(
-                'settings' => $control_id,
-                'label'    => 'Featured category',
-                'section'  => $section_id, // Enter the name of your own section
-                'type'     => 'multiple-select', // The $type in our class
-                'choices' => $cats
+    if(is_array($cats) && count($cats) > 0) {
+        $wp_customize->add_setting( $control_id, array(
+            'default' => 0,
+            'transport'   => 'refresh',
+        ));
+        
+        $wp_customize->add_control(
+            new Nt_Customize_Control_Multiple_Select (
+                $wp_customize,
+                'nt_featured_cat',
+                array(
+                    'settings' => $control_id,
+                    'label'    => 'Featured category',
+                    'section'  => $section_id, // Enter the name of your own section
+                    'type'     => 'multiple-select', // The $type in our class
+                    'choices' => $cats
+                )
             )
-        )
-    );
+        );
+    }
 }
 function combobox_choise_category($wp_customize, $label, $control_id, $section_id){
+        
+    $cats = get_list_option_cat();
     if(is_array($cats) && count($cats) > 0) {
         $wp_customize->add_setting($control_id,
             array(
