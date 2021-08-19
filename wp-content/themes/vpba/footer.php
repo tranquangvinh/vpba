@@ -1,29 +1,19 @@
 
 <div class="footer">
     <div class="container">
-        <div class="advertisement-footer">
-            <div class="title-header d-flex align-items-end mt-4">
-                <a class="main mr-auto" href="">
-                    <span>Quảng cáo</span>
-                </a>
-                <div class="clearfix"></div>
-            </div>
-            <?php do_action('advertisements_footer'); ?>
+        <div class="contact">
+           <?php echo wp_nav_menu(['menu' => 'menu-footer-1']); ?>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="top d-flex align-items-end">
-                <div class="mr-auto">
-                    <?php do_action('menu_footer'); ?>
-                </div>
-                <div class="social">
-                    <?php do_action('list_social'); ?>
-                </div>
-            </div>
-            <div class="contact">
-                <?php echo get_theme_mod('content_contact'); ?>
-            </div>
+         <div class="contact">
+           <?php echo wp_nav_menu(['menu' => 'menu-footer-2']); ?>
+        </div>
+        <div class="footer_info">
+            <p style="color: #172973;"><b>Copyright © 2009 - 2021 Đạo Phật Ngày Nay</b><br>
+                Biên tập: <b>Thượng tọa Thích Nhật Từ</b> | Phụ trách mạng: <b>Thích Ngộ Dũng - Hải Hạnh - Giác Định</b><br>
+                <b>Bài vở đóng góp, xin gởi attachment về Ban biên tập qua địa chỉ email: goibaidaophatngaynay@yahoo.com hoặc thichngodung@gmail.com</b></p>
+            <p>Liên lạc thư tín với Tỳ-kheo Thích Nhật Từ xin gởi về: <br>
+                Chùa Giác Ngộ, 92 Nguyễn Chí Thanh, phường 3, quận 10, TP. Hồ Chí Minh, Việt Nam<br>
+                Điện thoại từ nước ngoài: +84-908-153-160 (M); +84-8-830-9570 (H); trong nước: 0908153160; 8309570.</p>
         </div>
     </div>
 </div>

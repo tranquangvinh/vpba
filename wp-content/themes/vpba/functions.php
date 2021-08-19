@@ -12,6 +12,7 @@ function meanwell_theme_enqueue_styles() {
     wp_enqueue_style( 'select2', get_template_directory_uri() . '/assets/css/select2.min.css');
     wp_enqueue_style( 'carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css');
     wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/assets/css/slick.css');
+    wp_enqueue_style( 'footer-css', get_template_directory_uri() . '/assets/css/footer.css');
 
     // js
     wp_enqueue_script( 'bootstrap-js-min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', ["jquery"], true);
