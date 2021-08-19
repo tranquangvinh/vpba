@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<?php get_template_part('template-parts/header/breadcrumb', 'header', ['title' => 'Trang chủ']); ?>
+<!-- <?php get_template_part('template-parts/header/breadcrumb', 'header', ['title' => 'Trang chủ']); ?> -->
 
 <div class="container">
-	<div class="post-home mt-4">
+	<div class="post-home">
 			<?php do_action('box_cat_header'); ?>
 	</div>
 

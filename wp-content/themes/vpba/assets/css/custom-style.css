@@ -23,14 +23,123 @@ a:hover {
 .header .banner a {
   display: block;
 }
-.header .banner img {
-  max-width: 100%;
+.header .header-top{
+  width: 100%;
+  height: 112px;
+  display: block;
+  padding: 0;
 }
+.header .header-top img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  object-fit: cover;
+}
+.header .header-top .link{
+  width: 100%;
+  height: 30px;
+  display: block;
+  position: relative;
+  padding:5px 0 5px 0 ;
+}
+.header .header-top .link .link-group{
+  width: 230px;
+  height: 100%;
+  display: flex;
+  float: right;
+}
+.header .header-top .link .link-group > a{
+  padding: 2px 5px 0 5px;
+  color: #AC5300;
+}
+.header .header-top .link .link-group > p{
+  color: #AC5300;
+}
+.header .header-top .box{
+  width: 100%;
+  height: 40px;
+  display: block;
+  position: relative;
+  margin-top:20px ;
+
+}
+.header .header-top .box .form-search {
+  float: right;
+  width: 300px;
+  height: 100%;
+  padding-top: 40px;
+}
+.header .header-top .box .form-search .box-input{
+  width: 250px;
+  height: 30px;
+}
+.header .header-top .box .form-search  .box-input .aaa{
+  background-color:#AC5300 !important;
+}
+
 .header .header-bottom {
   position: relative;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
+  padding: 0;
+  background: #ce7420 url(http://www.daophatngaynay.com/vn/themes/ngodung/img/menu.gif) repeat-x top left;
 }
+
+.header .header-bottom .menu-menu-main-container{
+  display: block;
+}
+.header .header-bottom .menu-menu-main-container .menu{
+  width: 100%;
+  display: flex;
+  padding: 10px !important;
+  margin: 0;
+}
+.header .header-bottom .menu-menu-main-container .menu li{
+  list-style: none;
+  position: relative;
+}
+.header .header-bottom .menu-menu-main-container .menu li :hover{
+  background-color: #BF620C;
+  color: white; 
+}
+.header .header-bottom .menu-menu-main-container .menu> li a{
+  display: block;
+  padding: 6px 10px 5px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-decoration: none;
+  color: #8A0000 ;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.header .header-bottom .menu-menu-main-container .menu > li > a{
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+  display: block;
+}
+
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu{
+  display: none;
+  position: absolute;
+  padding-left: 0 !important;
+  background-color: #AC5300 ;
+  width: 200px;
+}
+.header .header-bottom .menu-menu-main-container .menu li:hover > .sub-menu{
+  display: block;
+}
+.header .header-bottom .menu-menu-main-container .menu > li > .sub-menu{
+  position: absolute;
+}
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu a{
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+
 .header .header-bottom .right {
   position: absolute;
   right: 0;
@@ -166,10 +275,9 @@ a:hover {
 .breadscumb-row #current-time {
   color: #78000f;
 }
-
 .post-home .left {
   float: left;
-  width: 60%;
+  background-color:  #eee;
 }
 .post-home .right {
   float: right;
@@ -228,23 +336,67 @@ a:hover {
   color: #78000f;
 }
 .post-home .title:hover {
-  color: #78000f !important;
-}
-.post-home .item-post-left {
-  padding-right: 10px;
+  color: #AC5300 !important;
+  text-decoration-line:underline;
+  text-decoration-color: rgb(172, 83, 0);
+  text-decoration-style: solid;
+
 }
 .post-home .item-post-left .title {
   margin-top: 5px;
   display: block;
   border-bottom: none;
-  line-height: 26px;
   font-weight: 700;
-  font-size: 18px;
-  font-family: roboto;
-  color: #404041;
+  font-size: 14px;
+  color: #8A0000;
   font-style: normal;
+  text-align: left;
   margin-bottom: 0px;
 }
+.post-home .item-post-left .des{
+  margin-bottom: 2px !important;
+}
+.post-home .item-post-left .detail_link{
+  text-align: right;
+  color: #AC5300;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #faf7f7 ;
+  border-bottom-style: ridge;
+}
+.post-home .item-post-left .detail_link:hover{
+  text-decoration-line:underline;
+  text-decoration-color: rgb(172, 83, 0);
+  text-decoration-style: solid;
+}
+.post-home .item-post-left .pagination{
+  margin-top: 8px;
+}
+.post-home .item-post-left .pagination .box-post{
+  background-color: #A5A5A5;
+  color: white;
+  float: left;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin: 0 3px 0 3px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+.post-home .item-post-left .pagination .box-post .hiden{
+  display: none;
+}
+.post-home .item-post-left  .pagination a.active {
+  background-color: red;
+  color: white;
+}
+.post-home .item-post-left  .pagination a:hover:not(.active) {
+  background-color: #A5A5A5;
+}
+
+
+
 .post-home .item-post-left .wrap-image {
   padding-top: 55%;
 }
