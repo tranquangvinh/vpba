@@ -55,3 +55,15 @@ function add_exchange_rate($wp_customize){
 function add_link_website($wp_customize){
     select_menu($wp_customize, 'sidebar', 'menu_id');
 }
+
+function add_link_fanpage($wp_customize){
+    $wp_customize->add_setting('link_fanpage_info', array(
+        'default'        => '',
+    ));
+
+    $wp_customize->add_control('link_fanpage_info', array(
+        'label'   => 'Link FanPage',
+        'section' => 'sidebar',
+        'type'    => 'text',
+    ));
+}
