@@ -49,36 +49,26 @@ function template_category_header($query){
 					</a>
 				</div>
 			</div>
+			<?php wp_reset_postdata(); ?>	
 
-
-			<!-- <div class="right">
-				<?php 
-					$index = 0;
-					while ( $query->have_posts() ) { 
-						$query->the_post(); ?>
-						<div class="item-post-right">
-							<div class="child">
-								<a class="box-post <?php echo ($index == 0 ? 'active' : '') ?>" href="<?php echo get_the_permalink(); ?>">
-									<div class="image">
-										<div class="wrap-image">
-											<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-										</div>
-									</div>
-									<span class="title">
-										<?php echo get_the_title(); ?>
-									</span>
-									<span class="excerpt d-none">
-										<?php echo wp_trim_words(get_the_content(), 40, '...' ); ?>
-									</span>
-								</a>
-								<div class="clearfix"></div>
-							</div>
+			<div class="right col-md-3 pl-2 pr-2">
+				<div class="box_title_holder">
+					<div class="box_title">
+						<h4>
+							Bai moi
+							<span>Thu 6 ngay 13</span>
+						</h4>
+					</div>
+				</div>
+				<div class="box_body">
+					<div class="box_content">
+						<div class="box_item">
+							<a href="">qqq</a>
 						</div>
-			 	<?php 
-			 			$index++;
-		 			} ?>
-		 	</div> -->
-
+					</div>
+				</div>				
+			</div>					
+			
 			 
 		 	<div class="clearfix"></div>
 	<?php }

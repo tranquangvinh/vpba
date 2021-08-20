@@ -57,20 +57,16 @@ a:hover {
 }
 .header .header-top .box{
   width: 100%;
-  height: 40px;
   display: block;
   position: relative;
-  margin-top:20px ;
 
 }
 .header .header-top .box .form-search {
   float: right;
-  width: 300px;
   height: 100%;
   padding-top: 40px;
 }
 .header .header-top .box .form-search .box-input{
-  width: 250px;
   height: 30px;
 }
 .header .header-top .box .form-search  .box-input .aaa{
@@ -78,10 +74,11 @@ a:hover {
 }
 
 .header .header-bottom {
+  display: block;
   position: relative;
   border-bottom: 1px solid #ccc;
   padding: 0;
-  background: #ce7420 url(http://www.daophatngaynay.com/vn/themes/ngodung/img/menu.gif) repeat-x top left;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/menu.gif) repeat-x top left;
 }
 
 .header .header-bottom .menu-menu-main-container{
@@ -89,21 +86,24 @@ a:hover {
 }
 .header .header-bottom .menu-menu-main-container .menu{
   width: 100%;
-  display: flex;
-  padding: 10px !important;
+  display: block;
+  padding: 5px !important;
   margin: 0;
 }
 .header .header-bottom .menu-menu-main-container .menu li{
+  display: inline-flex;
   list-style: none;
   position: relative;
+  padding-right: 5px;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/mainnav-sep.gif) no-repeat right bottom;
 }
-.header .header-bottom .menu-menu-main-container .menu li :hover{
+.header .header-bottom .menu-menu-main-container .menu li a:hover{
   background-color: #BF620C;
   color: white; 
 }
 .header .header-bottom .menu-menu-main-container .menu> li a{
   display: block;
-  padding: 6px 10px 5px 10px;
+  padding: 2px 10px 1px 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-decoration: none;
@@ -122,9 +122,10 @@ a:hover {
 
 .header .header-bottom .menu-menu-main-container .menu li .sub-menu{
   display: none;
-  position: absolute;
+  margin-top: 20px;
   padding-left: 0 !important;
   background-color: #AC5300 ;
+  z-index: 3;
   width: 200px;
 }
 .header .header-bottom .menu-menu-main-container .menu li:hover > .sub-menu{
@@ -133,12 +134,23 @@ a:hover {
 .header .header-bottom .menu-menu-main-container .menu > li > .sub-menu{
   position: absolute;
 }
-.header .header-bottom .menu-menu-main-container .menu li .sub-menu a{
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu li{
   width: 100%;
   height: 100%;
-  color: white;
+}
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu li .sub-menu{
+  margin-left: 190px;
+  margin-top: 0;
+  position: absolute;
 }
 
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu a{
+  color: white;
+}
+.header .header-bottom .menu-menu-main-container .menu li .sub-menu li:hover{
+  background-color: #BF620C;
+  color: white; 
+}
 
 .header .header-bottom .right {
   position: absolute;
@@ -280,12 +292,54 @@ a:hover {
   background-color:  #eee;
 }
 .post-home .right {
-  float: right;
-  width: 40%;
-  max-height: 445px;
-  overflow-y: scroll;
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  float: left;
 }
+.post-home .right .box_title_holder{
+  width: 100%;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_head_right.gif) top right no-repeat;
+}
+.post-home .right .box_title_holder .box_title{
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_head_left.gif) top left no-repeat;
+  color: #000;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 6px;
+}
+.post-home .right .box_title_holder .box_title h4{
+  font-size: 16px;
+  font-weight: bold;
+  color: #8A0000;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0px;
+  margin-bottom: 4px;
+  text-shadow: 1px 1px 1px #bbbbbb;
+}
+.post-home .right .box_title_holder .box_title h4 span{
+  text-align: right;
+  font-size: 12px;
+  color: #666666;
+}
+.post-home .right .box_body .box_content{
+  padding: 0px 6px 0px 6px;
+}
+.post-home .right .box_body .box_content .box_item{
+  height: auto;
+  text-align: justify;
+  overflow: hidden;
+  width: 100%;
+} 
+.post-home .right .box_body .box_content .box_item a{
+  color: #AC5300;
+  text-decoration: none;
+} 
+.post-home .right .box_body .box_content .box_item a:hover{
+  color: #AC5300;
+  text-decoration: none;
+} 
+
+
+
 .post-home .image {
   position: relative;
 }

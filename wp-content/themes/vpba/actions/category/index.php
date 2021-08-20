@@ -28,7 +28,7 @@ function action_box_cate(){
 }
 
 function action_box_cat_header(){
-	$cat_id = get_theme_mod('option-category');
+	$cat_id = get_theme_mod('option-category-home');
     if(isset($cat_id)){
         $args = array(
             'post_type' => 'post',
