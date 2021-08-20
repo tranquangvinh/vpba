@@ -3,6 +3,7 @@ include_once(__DIR__ . '/render/slider.php');
 include_once(__DIR__ . '/render/video.php');
 include_once (dirname(__DIR__, 2) . '/actions/marquee/render/marquee-advertisement.php');
 include_once(__DIR__ . '/render/exchange-rate-info.php');
+include_once(__DIR__ . '/render/link_fanpage_info.php');
 include_once(__DIR__ . '/render/link-website.php');
 
 function action_sliders(){
@@ -26,6 +27,11 @@ function action_advertisements(){
 function action_exchange_rate_info(){
     $exchange_rate_info = get_theme_mod('exchange_rate_info');
     render_exchange_rate_info($exchange_rate_info);
+}
+
+function action_link_fanpage_info(){
+    $link_fanpage_info = get_theme_mod('link_fanpage_info');
+    render_link_fanpage_info($link_fanpage_info);
 }
 
 function action_link_website() {

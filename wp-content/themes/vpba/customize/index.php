@@ -21,6 +21,7 @@ add_action('customize_register', 'add_list_gallery');
 add_action('customize_register', 'add_list_video');
 add_action('customize_register', 'add_list_advertisement');
 add_action('customize_register', 'add_exchange_rate');
+add_action('customize_register', 'add_link_fanpage');
 add_action('customize_register', 'add_link_website');
 add_action('customize_register', 'add_list_advertisement_footer');
 add_action('customize_register', 'add_menu_footer');
