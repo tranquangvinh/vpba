@@ -24,7 +24,7 @@ if (class_exists('WP_Customize_Control')) {
             ?>
             <label>
                 <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-                <select class="customize-control-multi-select" <?php $this->link(); ?> multiple="multiple" style="height: 100%;">
+                <select class="customize-control-multi-select" <?php $this->link(); ?> multiple="multiple">
                     <?php
                         foreach ( $this->choices as $value => $label ) {
                             $selected = ( in_array( $value, $this->value() ) ) ? selected( 1, 1, false ) : '';

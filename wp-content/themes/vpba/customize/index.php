@@ -11,12 +11,8 @@ add_action('customize_register', 'block_footer');
 // add customize theme settings
 add_action('customize_register', 'add_banner_header');
 add_action('customize_register', 'add_link_banner');
-add_action('customize_register', 'add_option_category');
 add_action('customize_register', 'add_option_category_home');
-add_action('customize_register', 'add_option_category_1');
-add_action('customize_register', 'add_option_category_2');
-add_action('customize_register', 'add_option_category_3');
-add_action('customize_register', 'add_option_category_4');
+add_action('customize_register', 'add_multi_choise_category');
 add_action('customize_register', 'add_list_gallery');
 add_action('customize_register', 'add_list_video');
 add_action('customize_register', 'add_list_advertisement');
