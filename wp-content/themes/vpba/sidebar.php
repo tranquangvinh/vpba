@@ -37,6 +37,7 @@
         </a>
         <div class="clearfix"></div>
     </div>
-    <?php do_action('exchange_rate_info'); ?>
-    <?php do_action('link_fanpage_info'); ?> -->
+    <?php do_action('exchange_rate_info'); ?> -->
+
+    <?php do_action('link_fanpage_info'); ?>
 </div>

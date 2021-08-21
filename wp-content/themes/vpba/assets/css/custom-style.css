@@ -1063,6 +1063,9 @@ a:hover {
 .home-page .col-md-5, .home-page .col-md-7 {
   padding: 0px 5px;
 }
+.home-page .right.col-md-5{
+  padding-right: 0px !important;
+}
 @media (max-width: 767px) {
   .header .header-bottom .right {
     position: relative;

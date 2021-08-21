@@ -33,12 +33,28 @@ function add_link_banner($wp_customize){
 	));
 }
 
-function add_option_category_home($wp_customize){
-    combobox_choise_category(
-            $wp_customize,
-            'Select category to home',
-            'option-category-home',
-            'static_front_page');
+function add_tag_left($wp_customize){
+	// banner header
+    $wp_customize->add_setting('tag_left', array(
+	 'default'        => '',
+	 ));
+	$wp_customize->add_control('tag_left', array(
+		 'label'   => 'Tag left',
+		 'section' => 'static_front_page',
+		 'type'    => 'text',
+	));
+}
+
+function add_tag_right($wp_customize){
+	// banner header
+    $wp_customize->add_setting('tag_right', array(
+	 'default'        => '',
+	 ));
+	$wp_customize->add_control('tag_right', array(
+		 'label'   => 'Tag right',
+		 'section' => 'static_front_page',
+		 'type'    => 'text',
+	));
 }
 
 function add_multi_choise_category($wp_customize){

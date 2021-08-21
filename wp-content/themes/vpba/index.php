@@ -3,7 +3,7 @@
 
 <div class="container">
 <div class="home-page row mt-2">
-  <div class="col-md-7 col-sm-12 post-home">
+  <div class="col-md-7 col-sm-12 post-home mb-4">
     <div class="d-flex">
       <?php do_action('box_cat_header'); ?>
       <?php do_action('box_news_header'); ?>

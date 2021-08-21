@@ -7,7 +7,7 @@ function add_list_gallery($wp_customize){
     ));
     $wp_customize->add_control( new CDH_Box_Icon_control( $wp_customize, 'item_gallery',
         array(
-            'label' => __( 'Hình ảnh hoạt động' ),
+            'label' => __( 'Danh sách quảng cáo' ),
             'section' => 'sidebar',
             'input_args' => [
             ],
@@ -17,27 +17,6 @@ function add_list_gallery($wp_customize){
             ]
         )
     ) );
-}
-
-function add_list_video($wp_customize){
-    $wp_customize->add_setting('item_video', array(
-        'default'        => '',
-    ));
-    $wp_customize->add_control( new CDH_Box_Icon_control( $wp_customize, 'item_video',
-        array(
-            'label' => __( 'Video' ),
-            'section' => 'sidebar',
-            'input_args' => [
-            ],
-            'fields' => [
-                ['link', 'link', __("Link", 'nova-rklv')],
-            ]
-        )
-    ) );
-}
-
-function add_list_advertisement($wp_customize){
-    list_advertisement($wp_customize, 'sidebar', 'item_advertisement');
 }
 
 function add_exchange_rate($wp_customize){
