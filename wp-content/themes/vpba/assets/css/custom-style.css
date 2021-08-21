@@ -315,6 +315,9 @@ a:hover {
 .breadscumb-row #current-time {
   color: #78000f;
 }
+.post-home{
+  display: flex;
+}
 .post-home .left {
   float: left;
   background-color:  #eee;
@@ -341,17 +344,23 @@ a:hover {
   border-bottom: 1px solid #eee;
   padding: 6px 0px;
   margin-bottom: 4px;
-  text-shadow: 1px 1px 1px #bbbbbb;
+  text-shadow: rgb(187, 187, 187) 1px 1px 1px;
 }
 .post-home .right .box_title_holder .box_title h4 span{
-  text-align: right;
+  float: right;
+  text-align: center;
   font-size: 12px;
   color: #666666;
+  margin-top: 2px;
+  line-height: 22px;
+  text-shadow:  rgb(187, 187, 187) 1px 1px 1px;
 }
 .post-home .right .box_body .box_content{
-  padding: 0px 6px 0px 6px;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_right.gif) top left no-repeat;
 }
 .post-home .right .box_body .box_content .box_item{
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_left.gif) top left no-repeat;
+  padding: 0px 6px 0px 6px;
   height: auto;
   text-align: justify;
   overflow: hidden;
@@ -362,10 +371,14 @@ a:hover {
   text-decoration: none;
 } 
 .post-home .right .box_body .box_content .box_item a:hover{
-  color: #AC5300;
-  text-decoration: none;
+  text-decoration-line:underline;
+  text-decoration-color: #AC5300;
+  text-decoration-style: solid;
 } 
-
+.post-home .right .box_body .box_content .box_item a b{
+  font-size: 12px;
+  font-weight: 700;
+}
 
 
 .post-home .image {

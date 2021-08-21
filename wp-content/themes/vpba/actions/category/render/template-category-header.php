@@ -50,26 +50,6 @@ function template_category_header($query){
 				</div>
 			</div>
 			<?php wp_reset_postdata(); ?>	
-
-			<div class="right col-md-3 pl-2 pr-2">
-				<div class="box_title_holder">
-					<div class="box_title">
-						<h4>
-							Bai moi
-							<span>Thu 6 ngay 13</span>
-						</h4>
-					</div>
-				</div>
-				<div class="box_body">
-					<div class="box_content">
-						<div class="box_item">
-							<a href="">qqq</a>
-						</div>
-					</div>
-				</div>				
-			</div>					
-			
-			 
 		 	<div class="clearfix"></div>
 	<?php }
 	wp_reset_postdata();

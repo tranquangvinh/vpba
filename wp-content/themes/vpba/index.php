@@ -4,6 +4,7 @@
 <div class="container">
 	<div class="post-home">
 			<?php do_action('box_cat_header'); ?>
+      <?php do_action('box_news_header'); ?>
 	</div>
 
     <div class="row mt-4">

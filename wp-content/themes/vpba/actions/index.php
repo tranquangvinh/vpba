@@ -1,5 +1,6 @@
 <?php 
 include_once(__DIR__ . '/category/index.php');
+include_once(__DIR__ . '/news/index.php');
 include_once(__DIR__ . '/marquee/index.php');
 include_once(__DIR__ . '/sidebar/index.php');
 include_once(__DIR__ . '/footer/index.php');
@@ -7,6 +8,7 @@ include_once(__DIR__ . '/post/index.php');
 
 add_action('homepage_block_category', 'action_box_cate');
 add_action('box_cat_header', 'action_box_cat_header');
+add_action('box_news_header', 'action_box_news_header');
 add_action('marquee_header', 'action_marquee_header');
 add_action('sliders', 'action_sliders');
 add_action('videos', 'action_videos');
