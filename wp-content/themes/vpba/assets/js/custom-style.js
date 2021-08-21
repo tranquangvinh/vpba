@@ -21,7 +21,7 @@ function active_video(){
 
 $(document).ready(function() {
     setInterval( function() {
-        $('#current-time').html(dayjs().format('ddd [Ngày] D/MM/YYYY, h:mm:ss A'));
+        $('#current-time').html(dayjs().format('ddd  D/MM/YYYY'));
     },1000);
 
     // overwrite content of post

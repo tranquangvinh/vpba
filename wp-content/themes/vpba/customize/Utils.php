@@ -37,12 +37,13 @@ function multi_choise_category($wp_customize, $label, $control_id, $section_id){
         $wp_customize->add_setting( $control_id, array(
             'default' => 0,
             'transport'   => 'refresh',
+            'sanitize_callback' => 'nt_sanitize_cat'
         ));
         
         $wp_customize->add_control(
             new Nt_Customize_Control_Multiple_Select (
                 $wp_customize,
-                'nt_featured_cat',
+                $control_id,
                 array(
                     'settings' => $control_id,
                     'label'    => 'Featured category',

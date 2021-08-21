@@ -33,14 +33,6 @@ function add_link_banner($wp_customize){
 	));
 }
 
-function add_option_category($wp_customize){
-    combobox_choise_category(
-        $wp_customize,
-        'Select category to slogan',
-        'option-category',
-        'static_front_page');
-}
-
 function add_option_category_home($wp_customize){
     combobox_choise_category(
             $wp_customize,
@@ -49,39 +41,13 @@ function add_option_category_home($wp_customize){
             'static_front_page');
 }
 
-function add_option_category_1($wp_customize){
-    combobox_choise_category(
-        $wp_customize,
-        'Select category 1',
-        'option-category-1',
-        'static_front_page');
+function add_multi_choise_category($wp_customize){
+    multi_choise_category(
+    $wp_customize,
+    'Select multi category',
+    'multi-category',
+    'static_front_page');
 }
-
-function add_option_category_2($wp_customize){
-    combobox_choise_category(
-        $wp_customize,
-        'Select category 2',
-        'option-category-2',
-        'static_front_page');
-}
-
-function add_option_category_3($wp_customize){
-    combobox_choise_category(
-        $wp_customize,
-        'Select category 3',
-        'option-category-3',
-        'static_front_page');
-}
-
-function add_option_category_4($wp_customize){
-    combobox_choise_category(
-        $wp_customize,
-        'Select category 4',
-        'option-category-4',
-        'static_front_page');
-}
-
-
 
 
 

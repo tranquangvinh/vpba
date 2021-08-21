@@ -6,7 +6,7 @@ function template_category_header($query){
 		$post_link = get_permalink($first_post->ID);
 		$post_excerpt = wp_trim_words(  $first_post->post_content, 40, '...' );
 		?>
-			<div class="left col-md-4 pl-2 pr-2 pt-2 pb-3">
+			<div class="left col-md-7 pl-2 pr-2 pt-2 pb-3">
 				<div class="item-post-left">
 					<a id="link-post" href="<?php echo $post_link; ?>">
 						<div class="image">
@@ -50,7 +50,6 @@ function template_category_header($query){
 				</div>
 			</div>
 			<?php wp_reset_postdata(); ?>	
-		 	<div class="clearfix"></div>
 	<?php }
 	wp_reset_postdata();
 }

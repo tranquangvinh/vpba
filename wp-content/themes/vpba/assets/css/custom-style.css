@@ -312,18 +312,17 @@ a:hover {
 .breadscumb-row .marquee-list .item-marquee a:hover {
   color: #78000f;
 }
-.breadscumb-row #current-time {
-  color: #78000f;
-}
-.post-home{
-  display: flex;
+#current-time {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666666;
+  font-weight: bold;
 }
 .post-home .left {
-  float: left;
   background-color:  #eee;
-}
-.post-home .right {
-  float: left;
 }
 .post-home .right .box_title_holder{
   width: 100%;
@@ -335,13 +334,13 @@ a:hover {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  padding: 6px;
+  padding: 3px 6px;
+  position: relative;
 }
 .post-home .right .box_title_holder .box_title h4{
   font-size: 16px;
   font-weight: bold;
   color: #8A0000;
-  border-bottom: 1px solid #eee;
   padding: 6px 0px;
   margin-bottom: 4px;
   text-shadow: rgb(187, 187, 187) 1px 1px 1px;
@@ -357,6 +356,9 @@ a:hover {
 }
 .post-home .right .box_body .box_content{
   background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_right.gif) top left no-repeat;
+  border: 1px solid #ddd;
+  border-left: none;
+  height: 100%;
 }
 .post-home .right .box_body .box_content .box_item{
   background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_left.gif) top left no-repeat;
@@ -369,6 +371,7 @@ a:hover {
 .post-home .right .box_body .box_content .box_item a{
   color: #AC5300;
   text-decoration: none;
+  line-height: 20px;
 } 
 .post-home .right .box_body .box_content .box_item a:hover{
   text-decoration-line:underline;
@@ -1048,7 +1051,18 @@ a:hover {
   opacity: 1;
   cursor: pointer;
 }
-
+.container {
+  max-width: 990px;
+}
+.home-page.row{
+  margin: 0 -5px;
+}
+.home-page .col-md-7 {
+  padding: 0px 5px;
+}
+.home-page .col-md-5, .home-page .col-md-7 {
+  padding: 0px 5px;
+}
 @media (max-width: 767px) {
   .header .header-bottom .right {
     position: relative;
