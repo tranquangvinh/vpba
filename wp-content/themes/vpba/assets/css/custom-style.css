@@ -14,6 +14,7 @@
 body {
   font-family: arial !important;
   font-size: 14px;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/body_bg.gif) top repeat-y;
 }
 
 a:hover {
@@ -630,6 +631,22 @@ a:hover {
 .content-left .item-post-right .child .box-post-child .title {
   float: right;
   width: calc(100% - 110px);
+}
+.sidebar{
+  width: 100%;
+}
+.sidebar .link_fanpage_info{
+  width: 100%;
+}
+.sidebar .link_fanpage_info .fanpage{
+  margin-left: 10px;
+}
+.sidebar .link_slider{
+  width: 100%;
+  height: auto;
+}
+.sidebar .link_slider a img{
+  padding-bottom:10px ;
 }
 
 .sidebar .owl-carousel-sidebar {
