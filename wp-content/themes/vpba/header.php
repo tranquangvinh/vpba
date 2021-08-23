@@ -9,11 +9,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="header">
-    <?php if(wp_is_mobile()) :
-            echo get_template_part('template-parts/header/header-mobile', 'header-mobile');
-        else:
-            echo get_template_part('template-parts/header/header-pc', 'header-mobile');
-    endif;
-    ?>
-</div>
+  <div id="box-body" class="container">
+    <div class="header">
+        <?php if(wp_is_mobile()) :
+                echo get_template_part('template-parts/header/header-mobile', 'header-mobile');
+            else:
+                echo get_template_part('template-parts/header/header-pc', 'header-mobile');
+        endif;
+        ?>
+    </div>

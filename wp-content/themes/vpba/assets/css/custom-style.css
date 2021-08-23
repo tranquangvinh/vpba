@@ -14,7 +14,12 @@
 body {
   font-family: arial !important;
   font-size: 14px;
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/body_bg.gif) top repeat-y;
+  background: #efefef;
+}
+#box-body.container{
+  background: white;
+  box-shadow: 0px 3px 11px -1px #555555;
+  padding: 0px;
 }
 
 a:hover {
