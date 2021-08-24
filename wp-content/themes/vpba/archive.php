@@ -1,17 +1,14 @@
 <?php 
 	get_header();
-	$category = get_queried_object(
-		array('posts_per_page' => 15)
-	);
+	$category = get_queried_object(); //tra ve chinh ban than khi click menu
 	$categories=get_categories(
-		array( 'parent' => $category->cat_ID,
-				'posts_per_page' => 15)
+		array( 'parent' => $category->cat_ID) // tim thang con co ID cha 
 	);
 ?>
-<div class="col-md-12">
-	<div class="col-md-9 pt-2">
+<div class="col-md-12 pt-3 pb-5">
+	<div class="col-md-9">
 		<div id="box_center_holder_2">
-			<?php get_template_part('template-parts/archive/posts', 'posts'); ?>
+			<?php get_template_part('template-parts/archive/posts', 'posts',['category_id' => $category->term_id,'category_name' => $category->name]); ?>
 
 			<?php if(!empty($categories)){
 				foreach($categories as $item){
@@ -21,7 +18,7 @@
 						<?php echo $item->name ?>
 					</h4>
 					<?php 
-						$wpq = new WP_Query($categories);
+						$wpq = new WP_Query( array( 'cat' => $item->term_id ) );
 						if($wpq->have_posts()) {
 							while ( $wpq->have_posts() ) : $wpq->the_post();
 							?>
