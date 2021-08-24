@@ -389,6 +389,119 @@ a:hover {
   font-weight: 700;
 }
 
+#box_center_holder_2{
+  display: block;
+  height: auto;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+#box_center_holder_2 .parent{
+  color: #172973;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #EEEEEE;
+}
+
+#box_center_holder_2 .child{
+  font-size: 16px;
+  font-weight: 700;
+  color: #8A0000;
+  border-bottom: 1px solid #eee;
+  padding: 4px 0px;
+  margin-bottom: 4px;
+  text-shadow: 1px 1px 1px #bbbbbb;
+}
+
+.box_body{
+  display: block;
+  height: auto;
+  width: 100%;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+.box_body .short{
+  display: block;
+  height: auto;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+
+  border-bottom-color: rgb(238, 238, 238);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.box_body .short .short_holder{
+  display: block;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.box_body .short .short_holder h2{
+  display: block;
+  height: auto;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 4px;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: justify;
+
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+}
+
+.box_body .short .short_holder h2 a{
+  display: inline;
+  height: auto;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: justify;
+  text-decoration-color: rgb(172, 83, 0);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+
+  color: rgb(172, 83, 0);
+  cursor: pointer;
+}
+
+
+
+
+
+
 
 .post-home .image {
   position: relative;
