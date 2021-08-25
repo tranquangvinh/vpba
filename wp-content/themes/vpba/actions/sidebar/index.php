@@ -31,8 +31,17 @@ function action_exchange_rate_info(){
 }
 
 function action_posts_random(){
-    $posts_random = get_theme_mod('posts_random');
-    render_posts_random($posts_random);
+    $tag_name = get_theme_mod('posts_random');
+    $tag_name = 'new';
+	if(isset($tag_name)){
+		$args = array(
+			'posts_per_page' => 7,
+			'tag' => $tag_name
+		);
+		$query = new WP_Query( $args );
+		render_posts_random($query);
+	}
+
 }
 
 function action_link_fanpage_info(){
