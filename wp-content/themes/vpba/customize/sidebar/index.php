@@ -35,6 +35,18 @@ function add_link_website($wp_customize){
     select_menu($wp_customize, 'sidebar', 'menu_id');
 }
 
+function add_posts_random($wp_customize){
+    $wp_customize->add_setting('posts_random', array(
+        'default'        => '',
+    ));
+
+    $wp_customize->add_control('posts_random', array(
+        'label'   => 'Posts random',
+        'section' => 'sidebar',
+        'type'    => 'text',
+    ));
+}
+
 function add_link_fanpage($wp_customize){
     $wp_customize->add_setting('link_fanpage_info', array(
         'default'        => '',

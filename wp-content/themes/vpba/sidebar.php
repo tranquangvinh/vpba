@@ -40,5 +40,6 @@
     <?php do_action('exchange_rate_info'); ?> -->
 
     <?php do_action('sliders'); ?>
+    <?php do_action('posts_random'); ?>
     <?php do_action('link_fanpage_info'); ?>
 </div>

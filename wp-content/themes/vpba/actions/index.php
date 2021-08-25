@@ -14,6 +14,7 @@ add_action('sliders', 'action_sliders');
 add_action('videos', 'action_videos');
 add_action('advertisements', 'action_advertisements');
 add_action('exchange_rate_info', 'action_exchange_rate_info');
+add_action('posts_random', 'action_posts_random');
 add_action('link_fanpage_info', 'action_link_fanpage_info');
 add_action('link_website', 'action_link_website');
 add_action('advertisements_footer', 'action_advertisements_footer');

@@ -5,6 +5,7 @@ include_once (dirname(__DIR__, 2) . '/actions/marquee/render/marquee-advertiseme
 include_once(__DIR__ . '/render/exchange-rate-info.php');
 include_once(__DIR__ . '/render/link_fanpage_info.php');
 include_once(__DIR__ . '/render/link-website.php');
+include_once(__DIR__ . '/render/posts_random.php');
 
 function action_sliders(){
 	$slider = get_theme_mod('item_gallery');
@@ -27,6 +28,11 @@ function action_advertisements(){
 function action_exchange_rate_info(){
     $exchange_rate_info = get_theme_mod('exchange_rate_info');
     render_exchange_rate_info($exchange_rate_info);
+}
+
+function action_posts_random(){
+    $posts_random = get_theme_mod('posts_random');
+    render_posts_random($posts_random);
 }
 
 function action_link_fanpage_info(){
