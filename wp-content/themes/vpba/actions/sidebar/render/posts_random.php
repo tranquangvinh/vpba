@@ -100,4 +100,4 @@ function render_posts_random($exchange_url){ ?>
             </div>
         </div>
     </div>
-<?php }
+<?php } ?>
