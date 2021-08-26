@@ -1429,7 +1429,7 @@ a:hover {
   display: block;
   height: auto;
   margin-bottom: 6px;
-  width: 50%;
+  width: 100%;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -1595,4 +1595,7 @@ a:hover {
 
 #box_most_popular .box_body .box_content ul li a:hover{
   text-decoration: underline;
+}
+#box_most_popular .box_body .box_content ul li:last-of-type{
+  border-bottom: none;
 }
