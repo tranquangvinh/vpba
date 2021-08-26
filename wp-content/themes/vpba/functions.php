@@ -38,6 +38,8 @@ add_action( 'init', 'wpb_custom_new_menu' );
 include_once(__DIR__ . '/customize/index.php');
 // add actions
 include_once(__DIR__ . '/actions/index.php');
+// add taxanomies
+include_once(__DIR__ . '/taxanomies/index.php');
 
 
 
