@@ -16,7 +16,7 @@ add_action('customize_register', 'add_tag_right');
 add_action('customize_register', 'add_multi_choise_category');
 add_action('customize_register', 'add_list_gallery');
 add_action('customize_register', 'add_exchange_rate');
-add_action('customize_register', 'posts_random');
+add_action('customize_register', 'add_posts_random');
 add_action('customize_register', 'add_link_fanpage');
 add_action('customize_register', 'add_link_website');
 add_action('customize_register', 'add_list_advertisement_footer');

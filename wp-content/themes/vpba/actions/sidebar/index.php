@@ -32,7 +32,6 @@ function action_exchange_rate_info(){
 
 function action_posts_random(){
     $tag_name = get_theme_mod('posts_random');
-    $tag_name = 'new';
 	if(isset($tag_name)){
 		$args = array(
 			'posts_per_page' => 7,
