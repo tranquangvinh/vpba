@@ -14,21 +14,27 @@ if(isset( $args['category_id'])) :
 	);
 	$query = new WP_Query( $args );
 	if($query->have_posts()) : ?>
-		<div class="related-post">
-			<div class="title-header d-flex align-items-end">
-			    <a class="main mr-auto" href="">
-			    	<span>Tin liên quan</span>
-			    </a>
-			    <div class="clearfix"></div>
-			</div>
-<?php		while($query->have_posts()) : 
-				$query->the_post();?>
-				<div class="post-item">
-					<a href="<?php echo get_the_permalink(); ?>">
-						<?php echo get_the_title(); ?>
-					</a>
+		<div id="article_holder" class="folder-news">
+			<div class="othernews-header">
+				<div class="othernews-title">Các bài viết khác :</div>
+				<div class="txtr" style="margin-bottom: 10px;"><a href="JavaScript:history.go(-1)"><b>[ Trở về ]</b></a>
 				</div>
+			</div>
+				<div class="othernews">
+					<div class="box_content">
+						<ul>
+<?php		while($query->have_posts()) : 
+				$query->the_post();?>	
+							<li>
+								<a class="link-othernews"
+									href="<?php echo get_the_permalink(); ?>"
+									title="<?php echo get_the_title(); ?>">&nbsp;<?php echo get_the_title(); ?>
+								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#736F6E"><i>Bảo Tiên </i></font>
+							</li>				
 <?php		endwhile; ?>
+						</ul>
+					</div>
+			</div>
 		</div>
 <?php	
 	endif;

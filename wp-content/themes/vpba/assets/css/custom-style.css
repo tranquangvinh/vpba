@@ -1599,3 +1599,185 @@ a:hover {
 #box_most_popular .box_body .box_content ul li:last-of-type{
   border-bottom: none;
 }
+
+
+#article_holder{
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 0px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+.othernews-header{
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(255, 255, 255);
+  background-image: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/othernews-header.gif);
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+
+  background-size: auto;
+}
+
+.othernews-header .othernews-title{
+  display: block;
+  float: left;
+  height: auto;
+  padding-right: 5px;
+  width: 100%;
+
+  font-family: arial;
+  font-size: 14px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
+
+  color: rgb(138, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+.othernews-header .txtr{
+  display: block;
+  height: auto;
+  margin-bottom: 10px;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: right;
+}
+
+.othernews-header .txtr a{
+  display: inline;
+  height: auto;
+  width: auto;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: right;
+  text-decoration-color: rgb(172, 83, 0);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+
+  color: rgb(172, 83, 0);
+  cursor: pointer;
+}
+
+#article_holder .othernews{
+  display: block;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+
+#article_holder .othernews .box_content{
+  display: block;
+  height: auto;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+#article_holder .othernews .box_content ul{
+  height: auto;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 0px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 40px;
+}
+
+#article_holder .othernews .box_content ul li{
+  display: list-item;
+  height: auto;
+  padding-left: 6px;
+  position: relative;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/bullet_arrow.gif) 0px 3px no-repeat;
+
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none; 
+}
+
+#article_holder .othernews .box_content ul li a{
+  display: inline;
+  height: auto;
+  width: auto;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  text-decoration-color: rgb(172, 83, 0);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+
+  color: rgb(172, 83, 0);
+  cursor: pointer;
+
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
