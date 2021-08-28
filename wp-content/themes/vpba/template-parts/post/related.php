@@ -29,7 +29,7 @@ if(isset( $args['category_id'])) :
 								<a class="link-othernews"
 									href="<?php echo get_the_permalink(); ?>"
 									title="<?php echo get_the_title(); ?>">&nbsp;<?php echo get_the_title(); ?>
-								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#736F6E"><i>Bảo Tiên </i></font>
+								</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#736F6E"><i><?php echo get_the_author_meta('display_name'); ?></i></font>
 							</li>				
 <?php		endwhile; ?>
 						</ul>
