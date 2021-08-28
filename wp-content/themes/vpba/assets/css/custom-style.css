@@ -398,6 +398,23 @@ a:hover {
   font-size: 12px;
   text-align: left;
 }
+.more{
+  margin-top: 5px;
+  padding-right: 10px;
+  text-align: right;
+  background: transparent url(../img/pagination_last.gif) no-repeat scroll right 4px;
+}
+.more a{
+  color: #AC5300;
+  text-decoration: none;
+}
+.more a:hover{
+  text-decoration-line:underline;
+  text-decoration-color: #AC5300;
+  text-decoration-style: solid;
+}
+
+
 #box_center_holder_2 .parent{
   color: #172973;
   font-size: 24px;
@@ -407,7 +424,7 @@ a:hover {
   border-bottom: 3px solid #EEEEEE;
 }
 
-#box_center_holder_2 .child{
+#box_center_holder_2 h4 a{
   font-size: 16px;
   font-weight: 700;
   color: #8A0000;
@@ -415,6 +432,12 @@ a:hover {
   padding: 4px 0px;
   margin-bottom: 4px;
   text-shadow: 1px 1px 1px #bbbbbb;
+}
+
+#box_center_holder_2 h4 a:hover{
+  text-decoration-line:underline;
+  text-decoration-color: #8A0000;
+  text-decoration-style: solid;
 }
 
 .box_body{
@@ -483,7 +506,6 @@ a:hover {
   display: inline;
   height: auto;
   width: 100%;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -496,12 +518,12 @@ a:hover {
   color: rgb(172, 83, 0);
   cursor: pointer;
 }
-
-
-
-
-
-
+.box_body .short .short_holder h2 a:hover{
+  color: #8A0000;
+  text-decoration-line:underline;
+  text-decoration-color: #8A0000;
+  text-decoration-style: solid;
+}
 
 .post-home .image {
   position: relative;

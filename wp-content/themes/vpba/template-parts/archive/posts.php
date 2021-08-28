@@ -5,7 +5,10 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 ?>
 <div id="category_holder">
 	<h1 class="parent">
-		<?php echo $category_name; ?>
+		<?php 
+			$temp = mb_strtolower($category_name, "utf8");
+			echo ucfirst($temp); 
+		?>
 	</h1>
 	<div class="box_body">
 	<?php 
@@ -38,6 +41,11 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 		</div>
 		<?php	
 			endwhile;
+			?>
+			 <!-- <div class="pagination-category">
+				<?php do_action('pagination'); ?>
+			</div>  -->
+		<?php
 		else: 
 			echo "<h1 class='data-empty'>Không có kết quả phù hợp với từ khóa tìm kiếm.</h1>";
 		endif;

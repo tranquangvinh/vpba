@@ -14,8 +14,8 @@
 				foreach($categories as $item){
 				?>
 				<div id="category_holder">
-					<h4 class="child">
-						<?php echo $item->name ?>
+					<h4>
+						<a href="<?php echo get_category_link( $item->cat_ID ); ?>"><?php echo $item->name?></a>
 					</h4>
 					<?php 
 						$wpq = new WP_Query( array( 'cat' => $item->term_id ) );
@@ -37,8 +37,11 @@
 								</div>
 							</div>
 					<?php endwhile;} ?>
+					<div class="more">
+                        <a title="" href="<?php echo get_category_link( $item->cat_ID ); ?>">Xem thêm</a>
+                    </div>
 				</div>
-			<?php }} wp_reset_postdata(); ?>
+			<?php }} wp_reset_postdata();?>				
 		</div>
 	</div>
 	<div class="col-md-12"></div>
