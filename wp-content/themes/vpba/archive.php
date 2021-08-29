@@ -30,13 +30,15 @@
 											</a>
 										</h2>
 										<span class="article_category_info">Tác giả: <a href="author/admin/"
-												title="Sư cô Quang Thuần">Sư cô Quang Thuần</a> - Đã đọc: 66&nbsp;| <a
-												href="">0
-												bình luận</a></span><br>
+												title="Sư cô Quang Thuần"><?php echo get_the_author(); ?></a></span><br>
 									</div>
 								</div>
 							</div>
-					<?php endwhile;} ?>
+					<?php endwhile; ?>
+							<!-- <div class="pagination-category">
+								<?php do_action('pagination'); ?>
+							</div> -->
+					<?php } ?>
 					<div class="more">
                         <a title="" href="<?php echo get_category_link( $item->cat_ID ); ?>">Xem thêm</a>
                     </div>

@@ -7,7 +7,7 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 	<h1 class="parent">
 		<?php 
 			$temp = mb_strtolower($category_name, "utf8");
-			echo ucfirst($temp); 
+			echo $temp;
 		?>
 	</h1>
 	<div class="box_body">
@@ -34,18 +34,11 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 					</a>
 				</h2>
 				<span class="article_category_info">Tác giả: <a href="author/admin/"
-						title="Sư cô Quang Thuần">Sư cô Quang Thuần</a> - Đã đọc: 66&nbsp;| <a
-						href="">0
-						bình luận</a></span><br>
+						title="Sư cô Quang Thuần"><?php echo get_the_author(); ?></a></span><br>
 			</div>
 		</div>
 		<?php	
 			endwhile;
-			?>
-			 <!-- <div class="pagination-category">
-				<?php do_action('pagination'); ?>
-			</div>  -->
-		<?php
 		else: 
 			echo "<h1 class='data-empty'>Không có kết quả phù hợp với từ khóa tìm kiếm.</h1>";
 		endif;

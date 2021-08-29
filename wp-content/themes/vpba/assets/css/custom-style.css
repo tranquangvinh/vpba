@@ -91,7 +91,7 @@ a:hover {
   position: relative;
   border-bottom: 1px solid #ccc;
   padding: 0;
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/menu.gif) repeat-x top left;
+  background: url(../img/menu.gif) repeat-x top left;
   background-size: contain;
 }
 
@@ -111,7 +111,7 @@ a:hover {
   display: inline-block;
   position: relative;
   padding-right: 5px;
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/mainnav-sep.gif) no-repeat right bottom;
+  background: url(../img/mainnav-sep.gif) no-repeat right bottom;
 }
 .header .header-bottom .menu-menu-main-container .menu li:hover > a{
   background-color: #BF620C;
@@ -332,10 +332,10 @@ a:hover {
 }
 .post-home .right .box_title_holder{
   width: 100%;
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_head_right.gif) top right no-repeat;
+  background: url(../img/box_right_head_right.gif) top right no-repeat;
 }
 .post-home .right .box_title_holder .box_title{
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_head_left.gif) top left no-repeat;
+  background: url(../img/box_right_head_left.gif) top left no-repeat;
   color: #000;
   font-weight: normal;
   font-size: 16px;
@@ -361,13 +361,13 @@ a:hover {
   text-shadow:  rgb(187, 187, 187) 1px 1px 1px;
 }
 .post-home .right .box_body .box_content{
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_right.gif) top left no-repeat;
+  background: url(../img/box_right_body_right.gif) top left no-repeat;
   border: 1px solid #ddd;
   border-left: none;
   height: 100%;
 }
 .post-home .right .box_body .box_content .box_item{
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/box_right_body_left.gif) top left no-repeat;
+  background: url(../img/box_right_body_left.gif) top left no-repeat;
   padding: 0px 6px 0px 6px;
   height: auto;
   text-align: justify;
@@ -422,6 +422,7 @@ a:hover {
   padding-bottom: 4px;
   margin-bottom: 12px;
   border-bottom: 3px solid #EEEEEE;
+  text-transform: capitalize;
 }
 
 #box_center_holder_2 h4 a{
@@ -524,7 +525,6 @@ a:hover {
   text-decoration-color: #8A0000;
   text-decoration-style: solid;
 }
-
 .post-home .image {
   position: relative;
 }
@@ -591,9 +591,11 @@ a:hover {
   font-style: normal;
   text-align: left;
   margin-bottom: 0px;
+  height: 50px;
 }
 .post-home .item-post-left .des{
   margin-bottom: 2px !important;
+  height: 105px;
 }
 .post-home .item-post-left .detail_link{
   text-align: right;
@@ -633,9 +635,6 @@ a:hover {
 .post-home .item-post-left  .pagination a:hover:not(.active) {
   background-color: #A5A5A5;
 }
-
-
-
 .post-home .item-post-left .wrap-image {
   padding-top: 55%;
 }
@@ -784,8 +783,11 @@ a:hover {
 .sidebar .link_slider{
   width: 100%;
   height: auto;
+  padding-top: 10px;
 }
 .sidebar .link_slider a img{
+  width: 100%;
+  height: auto;
   padding-bottom:10px ;
 }
 
@@ -1631,7 +1633,6 @@ a:hover {
   overflow-y: hidden;
   padding-bottom: 0px;
   padding-left: 11px;
-  padding-right: 11px;
   padding-top: 0px;
   position: relative;
   width: 100%;
@@ -1645,17 +1646,16 @@ a:hover {
   display: block;
   height: auto;
   margin-bottom: 10px;
+  margin-top: 10px;
   position: relative;
   width: 100%;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-align: left;
-
   background-attachment: scroll;
   background-clip: border-box;
   background-color: rgb(255, 255, 255);
-  background-image: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/othernews-header.gif);
+  background-image: url(../img/othernews-header.gif);
   background-origin: padding-box;
   background-position-x: 0%;
   background-position-y: 0%;
@@ -1664,12 +1664,9 @@ a:hover {
 }
 
 .othernews-header .othernews-title{
-  display: block;
   float: left;
   height: auto;
   padding-right: 5px;
-  width: 100%;
-
   font-family: arial;
   font-size: 14px;
   font-stretch: 100%;
@@ -1687,7 +1684,6 @@ a:hover {
 }
 
 .othernews-header .txtr{
-  display: block;
   height: auto;
   margin-bottom: 10px;
   width: 100%;
@@ -1701,7 +1697,6 @@ a:hover {
   display: inline;
   height: auto;
   width: auto;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-align: right;
@@ -1776,7 +1771,7 @@ a:hover {
   font-size: 12px;
   text-align: left;
 
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/bullet_arrow.gif) 0px 3px no-repeat;
+  background: url(../img/bullet_arrow.gif) 0px 3px no-repeat;
 
   list-style-image: none;
   list-style-position: outside;

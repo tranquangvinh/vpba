@@ -18,13 +18,16 @@
 				<div class="box_title">
 					<h4>
 						<a href="<?php echo $category_link; ?>"><?php echo $cat_name; ?></a>
+						<a class="title-right" href="<?php echo $category_link; ?>"><img src="" alt=""></a>
 					</h4>
-					<?php foreach($list_object_cat as $term) :  ?>
-						<span>
-							<a href="<?php echo $term['term_link']; ?>" ><?php echo $term['term_name']; ?></a>
-						</span>
-						<span class="flag">/</span>
-					<?php endforeach;?>
+					<div class="title-bottom">
+						<?php foreach($list_object_cat as $term) :  ?>
+							<span>
+								<a href="<?php echo $term['term_link']; ?>" ><?php echo $term['term_name']; ?></a>
+							</span>
+							<span class="flag">/</span>
+						<?php endforeach;?>
+					</div>
 				</div>
 			</div>
 			<?php
@@ -57,9 +60,10 @@
 										</a>
 									</div>
 									<h3>
-										<a href="<?php echo $post_link; ?>">
+										<a class="img-left" href="<?php echo $post_link; ?>">
 											<?php echo $first_post->post_title; ?>
 										</a>
+										<a class="img-right" href=""><img src="" alt=""></a>
 									</h3>
 									<span class="summary">
 										<?php echo $post_excerpt; ?>
@@ -80,7 +84,7 @@
 								</div>
 							</div>
 							<div class="more">
-								<a title="Xem thêm tin khác" href="<?php echo $category_link; ?>">Xem thêm tin khác 》</a>
+								<a title="Xem thêm tin khác" href="<?php echo $category_link; ?>">Xem thêm tin khác</a>
 							</div>
 						</div>
 					</div>
