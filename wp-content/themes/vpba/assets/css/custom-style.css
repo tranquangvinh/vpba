@@ -400,7 +400,7 @@ a:hover {
 }
 .more{
   margin-top: 5px;
-  padding-right: 10px;
+  padding-right: 15px;
   text-align: right;
   background: transparent url(../img/pagination_last.gif) no-repeat scroll right 4px;
 }
@@ -783,7 +783,6 @@ a:hover {
 .sidebar .link_slider{
   width: 100%;
   height: auto;
-  padding-top: 10px;
 }
 .sidebar .link_slider a img{
   width: 100%;
@@ -1855,4 +1854,7 @@ a:hover {
 .item-story a.active{
   color: rgb(138, 0, 0);
   font-weight: bold;
+}
+.article_category_info span{
+  color: rgb(138, 0, 0);
 }

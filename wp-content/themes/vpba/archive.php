@@ -25,19 +25,16 @@
 							<div class="box_body">
 								<div class="short">
 									<div class="short_holder">
-										<h2><a href="<?php echo get_the_permalink() ?>" title="Nhiễu Điều Phủ Lấy Giá Gương">
+										<h2><a href="<?php echo get_the_permalink() ?>">
 												<?php echo get_the_title(); ?>
 											</a>
 										</h2>
-										<span class="article_category_info">Tác giả: <a href="author/admin/"
-												title="Sư cô Quang Thuần"><?php echo get_the_author(); ?></a></span><br>
+										<span class="article_category_info">Tác giả: <span><?php echo get_the_author(); ?></span></span><br>
 									</div>
 								</div>
 							</div>
 					<?php endwhile; ?>
-							<!-- <div class="pagination-category">
-								<?php do_action('pagination'); ?>
-							</div> -->
+						 
 					<?php } ?>
 					<div class="more">
                         <a title="" href="<?php echo get_category_link( $item->cat_ID ); ?>">Xem thêm</a>

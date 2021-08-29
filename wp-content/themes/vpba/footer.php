@@ -1,6 +1,6 @@
 
         <div class="footer">
-            <div class="container">
+            <div class="">
                 <div class="contact">
                 <?php echo wp_nav_menu(['menu' => 'menu-footer-1']); ?>
                 </div>

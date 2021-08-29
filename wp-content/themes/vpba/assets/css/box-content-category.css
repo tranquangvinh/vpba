@@ -86,7 +86,7 @@ margin-inline-start: 0px;
   display: none;
 }
 
-#box_more_category_list .box_title h4 a {
+.box_more_category_list .box_title h4 a {
 color: #8a0000;
 }
 .box_more_category_list .box_title .flag:last-child{
@@ -178,7 +178,7 @@ text-align: justify;
   display: none;
 }
 
-#box_more_category_list .image_home {
+.box_more_category_list .image_home {
 display: inline-table;
 float: right;
 height: 87px;
@@ -305,7 +305,7 @@ text-align: right;
 display: inline;
 height: auto;
 width: auto;
-margin-right:2px;
+margin-right:5px;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: right;

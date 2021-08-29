@@ -33,7 +33,7 @@ if(is_array($terms) && count($terms) > 0){
 			); ?>
 		</div>
 	</div>
+    <?php get_footer(); ?>
 </div>
 
-<?php get_footer(); ?>
  
