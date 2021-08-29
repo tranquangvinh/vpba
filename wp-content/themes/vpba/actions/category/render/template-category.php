@@ -1,4 +1,3 @@
-
 <?php function template_category($cat_id, $cat_limit){ 
 	if(isset($cat_id)){ 
 		$cat_name = get_cat_name($cat_id);
@@ -13,7 +12,7 @@
                 ];
             }
     	} ?>
-		<div id="box_more_category_list" class="main_news_category">
+		<div class="box_more_category_list" class="main_news_category">
 			<div class="box_title_holder">
 				<div class="box_title">
 					<h4>

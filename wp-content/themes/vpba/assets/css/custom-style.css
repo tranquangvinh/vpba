@@ -787,6 +787,7 @@ a:hover {
 }
 .sidebar .link_slider a img{
   padding-bottom:10px ;
+  max-width: 100%;
 }
 
 .sidebar .owl-carousel-sidebar {
@@ -1771,16 +1772,14 @@ a:hover {
   padding-left: 6px;
   position: relative;
   width: 100%;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   text-align: left;
-
-  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/bullet_arrow.gif) 0px 3px no-repeat;
-
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/bullet_arrow.gif) 0 50% no-repeat;
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none; 
+  position: relative;
 }
 
 #article_holder .othernews .box_content ul li a{
@@ -1802,4 +1801,63 @@ a:hover {
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
+}
+.link_fanpage_info{
+  text-align: center;
+}
+.folder-news.another-stories{
+  padding: 0 !important;
+  border-top: 1px solid #efefef;
+  margin-top: 30px;
+  padding-top: 20px !important; 
+}
+.folder-news.another-stories .othernews-title{
+  font-size: 20px;
+}
+.folder-news.another-stories .box_content ul{
+  padding-left: 0px !important;
+}
+.folder-news.another-stories .box_content ul li{
+  font-size: 15px;
+  padding: 5px 0px;
+  padding-left: 10px !important;
+}
+.title-list-story{
+  border-top: 1px solid #efefef;
+  margin-top: 30px;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+  font-size: 20px;
+  display: block;
+  height: auto;
+  padding-right: 5px;
+  width: 100%;
+  font-family: arial;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
+  color: rgb(138, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.item-story{
+  margin: 0px;
+  background: url(http://www.daophatngaynay.com/vn/themes/ngodung/img/bullet_arrow.gif) 0 50% no-repeat;
+  padding-left: 10px;
+
+}
+.item-story a{
+  color: rgb(172, 83, 0);
+}
+.item-story a:hover{
+  color: rgb(138, 0, 0);
+}
+.item-story a.active{
+  color: rgb(138, 0, 0);
+  font-weight: bold;
 }

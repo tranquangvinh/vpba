@@ -1,12 +1,12 @@
 <?php 
 	get_header();
-	$category = get_queried_object(); //tra ve chinh ban than khi click menu
+	$category = get_queried_object();
 	$categories=get_categories(
-		array( 'parent' => $category->cat_ID) // tim thang con co ID cha 
+		array( 'parent' => $category->cat_ID)
 	);
 ?>
-<div class="col-md-12 pt-3 pb-5">
-	<div class="col-md-9">
+<div class="d-flex pt-3 pb-5">
+	<div class="col-md-7">
 		<div id="box_center_holder_2">
 			<?php get_template_part('template-parts/archive/posts', 'posts',['category_id' => $category->term_id,'category_name' => $category->name]); ?>
 
@@ -44,7 +44,18 @@
 			<?php }} wp_reset_postdata();?>				
 		</div>
 	</div>
-	<div class="col-md-12"></div>
+	<div class="col-md-5">
+		<?php get_sidebar(); ?>
+		<?php get_template_part(
+        'template-parts/fanpage/index', 
+        'fanpage', 
+        [
+          'link_fanpage' => get_theme_mod('link_fanpage_info'),
+          'width' => 370,
+          'height' => 500
+        ]
+        ); ?>
+	</div>
 </div>
 
 <?php get_footer() ?>

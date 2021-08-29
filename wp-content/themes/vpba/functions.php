@@ -40,7 +40,3 @@ include_once(__DIR__ . '/customize/index.php');
 include_once(__DIR__ . '/actions/index.php');
 // add taxanomies
 include_once(__DIR__ . '/taxanomies/index.php');
-
-
-
-

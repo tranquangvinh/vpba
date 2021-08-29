@@ -9,9 +9,8 @@ function render_slider($slider){
         <?php
     } ?>
     </div>
-	<?php
+<?php
 }
-     ?>
 
 
 

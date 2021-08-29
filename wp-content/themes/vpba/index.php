@@ -13,6 +13,15 @@
   <div class="col-md-5 col-sm-12">
       <!-- sidebar -->
       <?php get_sidebar(); ?>
+      <?php get_template_part(
+        'template-parts/fanpage/index', 
+        'fanpage', 
+        [
+          'link_fanpage' => get_theme_mod('link_fanpage_info'),
+          'width' => 370,
+          'height' => 500
+        ]
+        ); ?>
   </div>
 
 <?php get_footer(); ?>
