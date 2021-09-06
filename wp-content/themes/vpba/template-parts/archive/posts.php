@@ -33,13 +33,10 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 						<?php echo get_the_title(); ?>
 					</a>
 				</h2>
-				<span class="article_category_info">Tác giả: <span><?php echo get_the_author(); ?></span></span><br>
 			</div>
 		</div>
 		<?php	
 			endwhile;
-		else: 
-			echo "<h1 class='data-empty'>Không có kết quả phù hợp với từ khóa tìm kiếm.</h1>";
 		endif;
 		wp_reset_postdata(); ?>
 	</div>

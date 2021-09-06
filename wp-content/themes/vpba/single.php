@@ -30,8 +30,7 @@ get_template_part('template-parts/header/breadcrumb', 'archive', ['title' => $ca
 			); ?>
 		</div>
 	</div>
-	<?php get_footer(); ?>
 </div>
 
-
+<?php get_footer(); ?>
  
