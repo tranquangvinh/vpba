@@ -10,8 +10,12 @@
       </div>
       <?php do_action('homepage_block_category'); ?>
     </div>
-    <div class="col-md-5 col-sm-12">
-        <!-- sidebar -->
+    <div class="content-right col-md-5 col-sm-12">
+        <?php get_template_part(
+          'template-parts/search/index', 
+          'search'
+          ); ?>
+          <!-- sidebar -->
         <?php get_sidebar(); ?>
         <?php get_template_part(
           'template-parts/fanpage/index', 

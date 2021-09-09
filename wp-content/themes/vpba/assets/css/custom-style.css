@@ -68,22 +68,25 @@ a:hover {
   position: relative;
 
 }
-.header .header-top .form-search {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+.form-search {
+  width: 100%;
+  padding-bottom: 20px;
 }
-.header .header-top .form-search .box-input{
+.form-search .box-input{
+  width: 70%;
   height: 30px;
   border: 1px solid #ddd;
-  
+  font-style: italic;
 }
-.header .header-top .form-search .box-input:focus{
+.form-search .box-input:focus{
   outline: none;
 }
-.header .header-top .form-search  .box-input .aaa{
-  background-color:#AC5300 !important;
+.form-search .btn-search{
+  width: 20%;
+  padding: 4px 10px !important;
+  border-color: #EAAC64;
+  background-color: #EAAC64;
+  margin-left: 10px;
 }
 
 .header .header-bottom {
