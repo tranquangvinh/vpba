@@ -3,7 +3,7 @@
 
     <div class="container">
         <div class="row mt-4">
-            <div class="col-md-9 col-sm-12 content-left">
+            <div class="col-md-12 col-sm-12 content-left">
                 <?php
                     while ( have_posts() ) :
                         the_post(); ?>
@@ -17,15 +17,6 @@
                     endwhile;
                 ?>
             </div>
-
-            <div class="col-md-3 col-sm-12">
-                <!-- sidebar -->
-                <?php get_sidebar(); ?>
-            </div>
-        </div>
-
-        <div class="row mt-4">
-
         </div>
     </div>
 
