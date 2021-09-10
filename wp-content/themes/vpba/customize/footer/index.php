@@ -39,4 +39,3 @@ function add_content_contact($wp_customize){
         'type'    => 'textarea',
     ));
 }
-

@@ -72,7 +72,7 @@ font-weight: 700;
 line-height: 22px;
 text-align: left;
 text-shadow: #bbb 1px 1px 1px;
-color: #8a0000;
+color: RGB(192, 0, 0);
 border-bottom-color: #eee;
 border-bottom-style: solid;
 border-bottom-width: 1px;
@@ -87,7 +87,7 @@ margin-inline-start: 0px;
 }
 
 .box_more_category_list .box_title h4 a {
-color: #8a0000;
+color: RGB(192, 0, 0);
 }
 .box_more_category_list .box_title .flag:last-child{
   display: none;

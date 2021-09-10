@@ -6,7 +6,7 @@
 	);
 ?>
 <div class="d-flex pt-3 pb-5">
-	<div class="col-md-7">
+	<div class="col-md-8">
 		<div id="box_center_holder_2">
 			<?php get_template_part('template-parts/archive/posts', 'posts',['category_id' => $category->term_id,'category_name' => $category->name]); ?>
 
@@ -42,7 +42,7 @@
 			<?php }} wp_reset_postdata();?>				
 		</div>
 	</div>
-	<div class="col-md-5">
+	<div class="col-md-4">
 		<?php get_sidebar(); ?>
 		<?php get_template_part(
         'template-parts/fanpage/index', 

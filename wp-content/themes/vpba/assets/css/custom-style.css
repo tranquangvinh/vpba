@@ -13,8 +13,9 @@
 }
 body {
   font-family: arial !important;
-  font-size: 14px;
-  background: #efefef;
+  font-size: 15px;
+  color: RGB(0, 32,  96);
+  background: url(../img/page-background.png) repeat;
 }
 #box-body.container{
   background: white;
@@ -73,20 +74,31 @@ a:hover {
   padding-bottom: 20px;
 }
 .form-search .box-input{
-  width: 70%;
+  width: calc(100% - 70px);
   height: 30px;
   border: 1px solid #ddd;
   font-style: italic;
+  float: left;
 }
 .form-search .box-input:focus{
   outline: none;
 }
 .form-search .btn-search{
-  width: 20%;
-  padding: 4px 10px !important;
+  padding: 2px 10px !important;
   border-color: #EAAC64;
   background-color: #EAAC64;
-  margin-left: 10px;
+  height: 30px;
+  width: 70px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form-search .btn-search:focus{
+  box-shadow: none;
+}
+.form-search .btn-search:active{
+  border-color: #EAAC64 !important;
+  background-color: #EAAC64 !important;
+  box-shadow: none !important;
 }
 
 .header .header-bottom {
@@ -126,10 +138,9 @@ a:hover {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-decoration: none;
-  color: #8A0000 ;
+  color: RGB(192, 0, 0) ;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: bold;
   white-space: nowrap;
 }
 .header .header-bottom .menu-menu-main-container .menu > li > a{
@@ -325,7 +336,7 @@ a:hover {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-63%);
   font-size: 12px;
   color: #666666;
   font-weight: bold;
@@ -349,7 +360,7 @@ a:hover {
 .post-home .right .box_title_holder .box_title h4{
   font-size: 16px;
   font-weight: bold;
-  color: #8A0000;
+  color: RGB(192, 0, 0);
   padding: 6px 0px;
   margin-bottom: 4px;
   text-shadow: rgb(187, 187, 187) 1px 1px 1px;
@@ -431,7 +442,7 @@ a:hover {
 #box_center_holder_2 h4 a{
   font-size: 16px;
   font-weight: 700;
-  color: #8A0000;
+  color: RGB(192, 0, 0);
   border-bottom: 1px solid #eee;
   padding: 4px 0px;
   margin-bottom: 4px;
@@ -440,7 +451,7 @@ a:hover {
 
 #box_center_holder_2 h4 a:hover{
   text-decoration-line:underline;
-  text-decoration-color: #8A0000;
+  text-decoration-color: RGB(192, 0, 0);
   text-decoration-style: solid;
 }
 
@@ -511,21 +522,20 @@ a:hover {
   height: auto;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-align: justify;
   text-decoration-color: rgb(172, 83, 0);
   text-decoration-line: none;
   text-decoration-style: solid;
   text-decoration-thickness: auto;
-
   color: rgb(172, 83, 0);
   cursor: pointer;
 }
 .box_body .short .short_holder h2 a:hover{
-  color: #8A0000;
+  color: RGB(192, 0, 0);
   text-decoration-line:underline;
-  text-decoration-color: #8A0000;
+  text-decoration-color: RGB(192, 0, 0);
   text-decoration-style: solid;
 }
 .post-home .image {
@@ -572,7 +582,7 @@ a:hover {
 }
 .post-home a {
   display: block;
-  color: #404041;
+  color: RGB(0, 32,  96);
 }
 .post-home a.active {
   color: #78000f;
@@ -590,7 +600,7 @@ a:hover {
   border-bottom: none;
   font-weight: 700;
   font-size: 14px;
-  color: #8A0000;
+  color: RGB(192, 0, 0);
   font-style: normal;
   text-align: left;
   margin-bottom: 0px;
@@ -1066,9 +1076,13 @@ a:hover {
 }
 .post-detail .title {
   color: #78000f;
-  font-size: 23px !important;
   font-family: roboto;
   font-weight: 700;
+  font-size: 26px !important;
+  text-transform: capitalize;
+}
+.post-detail .content{
+  text-align: justify;
 }
 .post-detail .time-create-date {
   border-bottom: 1px solid #efefef;

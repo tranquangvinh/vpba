@@ -2,11 +2,11 @@
         <div class="footer">
             <div class="">
                 <div class="contact">
-                <?php echo wp_nav_menu(['menu' => 'menu-footer-1']); ?>
+                    <?php echo wp_nav_menu(['menu' => 'menu-footer-1']); ?>
                 </div>
-                <div class="contact">
-                <?php echo wp_nav_menu(['menu' => 'menu-footer-2']); ?>
-                </div>
+                <!-- <div class="contact">
+                    <?php echo wp_nav_menu(['menu' => 'menu-footer-2']); ?>
+                </div> -->
                 <?php echo get_theme_mod('content_contact'); ?>
             </div>
         </div>
