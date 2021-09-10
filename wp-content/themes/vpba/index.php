@@ -3,14 +3,14 @@
 
 <div class="container">
   <div class="home-page row mt-2">
-    <div class="col-md-7 col-sm-12 post-home mb-4">
+    <div class="col-md-8 col-sm-12 post-home mb-4">
       <div class="d-flex mb-3">
         <?php do_action('box_cat_header'); ?>
         <?php do_action('box_news_header'); ?>
       </div>
       <?php do_action('homepage_block_category'); ?>
     </div>
-    <div class="content-right col-md-5 col-sm-12">
+    <div class="content-right col-md-4 col-sm-12">
         <?php get_template_part(
           'template-parts/search/index', 
           'search'
@@ -22,7 +22,7 @@
           'fanpage', 
           [
             'link_fanpage' => get_theme_mod('link_fanpage_info'),
-            'width' => 370,
+            'width' => 300,
             'height' => 500
           ]
           ); ?>

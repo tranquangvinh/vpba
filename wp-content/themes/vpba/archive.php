@@ -49,7 +49,7 @@
         'fanpage', 
         [
           'link_fanpage' => get_theme_mod('link_fanpage_info'),
-          'width' => 370,
+          'width' => 300,
           'height' => 500
         ]
         ); ?>

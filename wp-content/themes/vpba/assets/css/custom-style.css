@@ -1080,6 +1080,7 @@ a:hover {
   font-weight: 700;
   font-size: 26px !important;
   text-transform: capitalize;
+  text-align: center;
 }
 .post-detail .content{
   text-align: justify;
@@ -1233,10 +1234,10 @@ a:hover {
 .home-page.row{
   margin: 0 -5px;
 }
-.home-page .col-md-7 {
+.home-page .col-md-8 {
   padding: 0px 5px;
 }
-.home-page .col-md-5, .home-page .col-md-7 {
+.home-page .col-md-4, .home-page .col-md-8 {
   padding: 0px 5px;
 }
 .home-page .right.col-md-5{
