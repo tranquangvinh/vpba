@@ -68,7 +68,9 @@
 									<span class="summary">
 										<?php echo $post_excerpt; ?>
 									</span>
-									<ul>
+									
+								</div>
+								<ul>
 									<?php 
 										$index = 0;
 										while ( $query->have_posts() ) { 
@@ -81,7 +83,6 @@
 											$index++;
 										} ?>
 									</ul>
-								</div>
 							</div>
 							<div class="more">
 								<a title="Xem thêm tin khác" href="<?php echo $category_link; ?>">Xem thêm tin khác</a>
