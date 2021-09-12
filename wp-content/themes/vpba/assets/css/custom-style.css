@@ -1088,6 +1088,7 @@ a:hover {
 .post-detail .time-create-date {
   border-bottom: 1px solid #efefef;
   padding-bottom: 7px;
+  text-align: right;
 }
 
 .tag-post {
