@@ -36,7 +36,7 @@ while ( have_posts() ) :
 		);
 		$wpq = new WP_Query( $prameter);
 		if ($wpq->have_posts() ) : ?>
-			<div class="title-list-story">Danh sách tập: </div>
+			<div class="title-list-story">Những tập kinh khác: </div>
 	<?php	while ($wpq->have_posts()) :
 				$wpq->the_post(); ?>
 			<p class="item-story">

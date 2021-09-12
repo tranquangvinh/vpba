@@ -18,7 +18,7 @@ if(isset( $args['term_id'])) :
     if(isset($result) && count($result) > 0){ ?>
         <div id="article_holder" class="folder-news another-stories">
                 <div class="othernews-header">
-                    <div class="othernews-title">Truyện khác :</div>
+                    <div class="othernews-title">Những bộ Kinh khác :</div>
                 </div>
                     <div class="othernews">
                         <div class="box_content">
