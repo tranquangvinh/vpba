@@ -156,7 +156,7 @@ a:hover {
   padding-left: 0 !important;
   background-color: #AC5300 ;
   z-index: 3;
-  width: 200px;
+  width: 250px;
 }
 .header .header-bottom .menu-menu-main-container .menu li:hover > .sub-menu{
   display: block;
