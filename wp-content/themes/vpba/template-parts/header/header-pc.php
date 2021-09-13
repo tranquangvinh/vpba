@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
     <div class="banner">
         <div class="header-top col-md-12">
             <div class="image">

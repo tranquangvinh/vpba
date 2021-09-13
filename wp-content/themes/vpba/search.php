@@ -1,20 +1,28 @@
 <?php
 
 get_header(); ?>
-<?php get_template_part('template-parts/header/breadcrumb', 'archive', ['title' => "Kết quả tìm kiếm"]); ?>
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-9 col-sm-12">
-			<?php get_template_part('template-parts/archive/posts', 'posts'); ?>
-			<div>
-				<?php get_template_part('template-parts/archive/pagination', 'pagination'); ?>
+ 
+<div class="container mb-4">
+	<p class="title-search">kết quả tìm kiếm</p>
+	<?php 
+	if (have_posts() ) :
+		while (have_posts()) :
+			the_post(); ?>
+	<div class="box_body">
+		<div class="short">
+			<div class="short_holder">
+				<h2><a href="<?php echo get_the_permalink() ?>">
+						<?php echo get_the_title(); ?>
+					</a>
+				</h2>
 			</div>
 		</div>
-		<div class="col-md-3 col-sm-12">
-			<?php get_sidebar(); ?>
-		</div>
 	</div>
-</div>
+	<?php	
+		endwhile;
+	endif;
+	wp_reset_postdata(); ?>
+</div> 
+
 
 <?php get_footer();

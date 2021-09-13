@@ -1876,3 +1876,9 @@ a:hover {
 .article_category_info span{
   color: rgb(138, 0, 0);
 }
+.title-search{
+  font-size: 20px;
+  color: RGB(192, 0, 0);
+  padding: 10px 10px 5px 0px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}

@@ -1,7 +1,7 @@
 <?php 
 
 function add_taxonomy_stories() {
-    register_taxonomy('stories', 'story', array(
+    register_taxonomy('stories', 'stories', array(
       'hierarchical' => true,
       'labels' => array(
         'name' => _x( 'Stories', 'taxonomy general name' ),
@@ -17,7 +17,7 @@ function add_taxonomy_stories() {
         'menu_name' => __( 'Stories' ),
       ),
       'rewrite' => array(
-        'slug' => 'story',
+        'slug' => 'stories',
         'with_front' => false,
         'hierarchical' => true
       ),
