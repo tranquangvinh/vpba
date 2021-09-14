@@ -999,6 +999,7 @@ a:hover {
 
 .pagination-category {
   text-align: center;
+  margin-top: 20px;
 }
 .pagination-category .pagination {
   display: inline-flex;
