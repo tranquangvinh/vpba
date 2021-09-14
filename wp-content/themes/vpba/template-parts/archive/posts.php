@@ -1,7 +1,12 @@
 <?php
-if(isset( $args['category_id']) && isset( $args['category_name']) ):
-	$category_id = $args['category_id'];
+if(isset( $args['term_id']) && isset( $args['category_name']) && isset( $args['term_id'])):
+	$term_id = $args['term_id'];
 	$category_name = $args['category_name'];
+	$category_id = $args['category_id'];
+	// do you have a son?
+	$categories=get_categories(
+		array( 'parent' => $category_id)
+	);
 ?>
 <div id="category_holder">
 	<h1 class="parent">
@@ -14,11 +19,13 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 	<?php 
 		$prameter = array(
 			'post_type' => 'post',
+			'post_per_page' => 2,
+			'paged' => get_query_var('paged'),
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'category',
 					'field'    => 'term_id',
-					'terms'    => $category_id,
+					'terms'    => $term_id,
 					'include_children' => false
 				),
 			),
@@ -36,7 +43,12 @@ if(isset( $args['category_id']) && isset( $args['category_name']) ):
 			</div>
 		</div>
 		<?php	
-			endwhile;
+			endwhile; 
+			if(empty($categories)){?>
+				<div class="pagination-category">
+					<?php do_action('pagination'); ?>
+				</div>
+		<?php } 
 		endif;
 		wp_reset_postdata(); ?>
 	</div>

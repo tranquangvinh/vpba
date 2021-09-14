@@ -8,8 +8,8 @@
 <div class="d-flex pt-3 pb-5">
 	<div class="col-md-8">
 		<div id="box_center_holder_2">
-			<?php get_template_part('template-parts/archive/posts', 'posts',['category_id' => $category->term_id,'category_name' => $category->name]); ?>
-
+			<?php get_template_part('template-parts/archive/posts', 'posts',['term_id' => $category->term_id,
+									'category_name' => $category->name,'category_id' =>  $category->cat_ID]); ?>
 			<?php if(!empty($categories)){
 				foreach($categories as $item){
 				?>
