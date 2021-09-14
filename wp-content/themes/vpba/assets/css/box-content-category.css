@@ -17,14 +17,12 @@ box-shadow: 0 1px;
 }
 .box_more_category_list {
 display: block;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 }
 .box_more_category_list .box_title_holder {
 display: block;
 height: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 background-attachment: scroll;
@@ -41,7 +39,6 @@ padding-bottom: 6px;
 padding-left: 6px;
 padding-right: 6px;
 padding-top: 6px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 16px;
 font-weight: 400;
 line-height: 22px;
@@ -66,7 +63,6 @@ padding-bottom: 4px;
 padding-left: 0px;
 padding-right: 0px;
 padding-top: 4px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 16px;
 font-weight: 700;
 line-height: 22px;
@@ -100,7 +96,6 @@ padding-left: 1px;
 padding-right: 1px;
 padding-top: 0px;
 width: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 11px;
 font-weight: 400;
 line-height: 22px;
@@ -114,7 +109,6 @@ color: #666;
 .box_more_category_list .box {
 display: block;
 margin-bottom: 6px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 background-attachment: scroll;
@@ -128,7 +122,6 @@ background-size: auto;
 }
 .box_more_category_list .box_body {
 display: block;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 }
@@ -138,7 +131,6 @@ padding-bottom: 15px;
 padding-left: 6px;
 padding-right: 6px;
 padding-top: 0px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 border-left: 1px solid #ddd;
@@ -150,7 +142,6 @@ padding-bottom: 3px;
 padding-left: 3px;
 padding-right: 3px;
 padding-top: 3px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: left;
 border-bottom-color: #eee;
@@ -162,7 +153,6 @@ display: block;
 height: auto;
 overflow-x: hidden;
 overflow-y: hidden;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 }
@@ -191,7 +181,6 @@ padding-bottom: 2px;
 padding-left: 2px;
 padding-right: 2px;
 padding-top: 2px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 border-bottom-color: #ccc;
@@ -218,7 +207,6 @@ border-top-width: 1px;
   object-fit: cover;
 }
 .box_more_category_list .summary {
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 }
@@ -227,7 +215,6 @@ display: inline;
 height: auto;
 padding-left: 4px;
 width: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 }
@@ -243,7 +230,6 @@ padding-left: 6px;
 padding-right: 6px;
 padding-top: 0px;
 width: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 border-left-color: #ac5300;
@@ -264,7 +250,6 @@ padding-left: 0px;
 padding-right: 0px;
 padding-top: 1px;
 width: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: justify;
 list-style-position: outside;
@@ -278,7 +263,6 @@ padding-left: 14px;
 padding-right: 2px;
 padding-top: 2px;
 width: auto;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 font-weight: 600;
 line-height: 20px;
@@ -306,7 +290,6 @@ display: inline;
 height: auto;
 width: auto;
 margin-right:5px;
-font-family: Arial, Helvetica, sans-serif;
 font-size: 12px;
 text-align: right;
 text-decoration-color: #ac5300;
