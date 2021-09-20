@@ -1,7 +1,8 @@
 <?php 
 	get_header();
 	$currentTerm = get_queried_object();
-	$childrenTerm = get_term_children($currentTerm->term_id, 'stories'); 
+    $childrenTerm = get_terms( 'stories', array( 'parent' => $currentTerm->term_id, 'hide_empty' => false ) );
+    
 ?>
 <div class="d-flex pt-3 pb-5">
 	<div class="col-md-8">
@@ -10,16 +11,14 @@
                 <h4 class="parent">
                     <?php echo $currentTerm->name?></a>
                 </h4>
-        <?php	foreach($childrenTerm as $term){
-                    $objTerm = get_term($term, 'stories');
-				?>
+        <?php	foreach($childrenTerm as $term){ ?>
 				<div id="category_holder">
                     <div class="box_body">
                         <div class="short">
                             <div class="short_holder">
                                 <h2>
-                                    <a href="<?php echo get_term_link( $objTerm->term_id, 'stories' ); ?>" title="Nhiễu Điều Phủ Lấy Giá Gương">
-                                        <?php echo $objTerm->name?>
+                                    <a href="<?php echo get_term_link( $term->term_id, 'stories' ); ?>" title="Nhiễu Điều Phủ Lấy Giá Gương">
+                                        <?php echo $term->name?>
                                     </a>
                                 </h2>
                             </div>
