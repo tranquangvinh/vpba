@@ -3,6 +3,33 @@
   font-family: arial;
   src: url("../font/arial.ttf");
 }
+@font-face {
+  font-family: "verdana";
+  src: url("../font/VERDANA.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "verdana";
+  src: url("../font/VERDANAI.TTF") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "verdana";
+  src: url("../font/VERDANAB.TTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "verdana";
+  src: url("../font/VERDANAZ.TTF") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
 @keyframes marquee {
   from {
     transform: translateY(-100%);
@@ -12,7 +39,7 @@
   }
 }
 body {
-  font-family: arial !important;
+  font-family: verdana !important;
   font-size: 15px;
   color: RGB(0, 32,  96);
   background: url(../img/page-background.png) repeat;
