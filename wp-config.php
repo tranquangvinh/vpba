@@ -20,13 +20,13 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'vpba' );
+define( 'DB_NAME', 'khe26067_khemarama' );
 
 /** Username của database */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'khe26067_dbu' );
 
 /** Mật khẩu của database */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'Mn48ns@6' );
 
 /** Hostname của database */
 define( 'DB_HOST', 'localhost' );
@@ -56,7 +56,8 @@ define( 'AUTH_SALT',        'A&0KnHW a!D*2ywiq }c&K~J3+cnNUYSK.f-KS*7B@#m<6*efO;
 define( 'SECURE_AUTH_SALT', 'w2[gZP2~W7S#]d<.7@(1nt<MKCX+FBz?otT/pEzv71qe3+`>~o/N#zDzZ4x_vZN6' );
 define( 'LOGGED_IN_SALT',   'aBRXcC7A5t?31]XB)Ped69O)13e(`L/ZQJ|q{7mA*di7}o0.Aa01}_m^kLFOM,CC' );
 define( 'NONCE_SALT',       'ft?J`$xONW:j]#?T~bd[x1;j1DL@J.c6&di|Z{Hn2~WNX%~}d7nXqNdnX!M:@M@/' );
-
+define( 'CONCATENATE_SCRIPTS', false ); 
+define( 'SCRIPT_DEBUG', true );
 /**#@-*/
 
 /**

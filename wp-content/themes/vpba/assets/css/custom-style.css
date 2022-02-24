@@ -156,7 +156,7 @@ a:hover {
   padding-left: 0 !important;
   background-color: #AC5300 ;
   z-index: 3;
-  width: 250px;
+  width: 280px;
 }
 .header .header-bottom .menu-menu-main-container .menu li:hover > .sub-menu{
   display: block;
@@ -515,7 +515,7 @@ a:hover {
   display: inline;
   height: auto;
   width: 100%;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   text-align: justify;
   text-decoration-color: rgb(172, 83, 0);

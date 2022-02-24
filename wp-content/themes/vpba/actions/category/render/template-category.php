@@ -13,8 +13,9 @@
             }
     	} ?>
 		<div class="box_more_category_list" class="main_news_category">
-			<?php if($cat_name!=null) {?>
-			<div class="box_title_holder">				
+											<?php if($cat_name!=null) {?>
+
+			<div class="box_title_holder">
 				<div class="box_title">
 					<h4>
 						<a href="<?php echo $category_link; ?>"><?php echo $cat_name; ?></a>
@@ -30,7 +31,8 @@
 					</div>
 				</div>
 			</div>
-			<?php } ?>
+				<?php } ?>
+			
 			<?php
 				$args = array(
 					'post_type' => 'post',
